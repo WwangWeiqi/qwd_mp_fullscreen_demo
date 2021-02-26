@@ -1,0 +1,849 @@
+.medicare {
+    width: 100%;
+    /* height: 100%; */
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: #0b0f34;
+    background: url('../img/background.jpg');
+    background-size: 100% 100%;
+}
+
+.medicare .header {
+    position: relative;
+    height: 42px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+    .medicare .header-title {
+        margin: 0;
+        padding: 0;
+        line-height: 4rem;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 400;
+        color: #e9c29d;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .header-title {
+        margin: 0;
+        padding: 0;
+        line-height: 56px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 400;
+        color: #e9c29d;
+    }
+}
+
+.medicare .wrapper {
+    position: absolute;
+    top: 36px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 10px 0 10px;
+    background: url("../img/wrapper-bg.png") no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+
+/* PC */
+
+@media (max-width:1919px) {
+    .medicare .header {
+        height: 36px;
+    }
+    .medicare .header-title {
+        line-height: 64px;
+        font-size: 42px;
+    }
+    .medicare .wrapper {
+        top: 52px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width:1279px) {
+    .medicare .header-title {
+        max-width: 96%;
+    }
+    .medicare .wrapper {
+        background: none;
+    }
+}
+
+
+/********** Content **********/
+
+.medicare .content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 25px 15px;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.medicare .col {
+    margin: 0 10px;
+    height: 100%;
+}
+
+.medicare .col-l {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2
+}
+
+.medicare .col-c {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+
+.medicare .col-r {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+}
+
+
+/* PC */
+
+@media (max-width:1919px) {
+    .medicare .content {
+        padding: 5px 0;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width:1279px) {
+    .medicare .content {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .medicare .col {
+        margin: 5px 0;
+    }
+    .medicare .col-l,
+    .medicare .col-c,
+    .medicare .col-r {
+        -webkit-flex: none;
+        -ms-flex: none;
+        flex: none;
+    }
+}
+
+.medicare .xpanel-wrapper {
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.medicare .xpanel-wrapper {
+    height: 100%;
+}
+
+.medicare .xpanel-wrapper-3 {
+    height: 3%;
+}
+
+.medicare .xpanel-wrapper-5 {
+    height: 5%;
+}
+
+.medicare .xpanel-wrapper-10 {
+    height: 10%;
+}
+
+.medicare .xpanel-wrapper-14 {
+    height: 14%;
+}
+
+.medicare .xpanel-wrapper-15 {
+    height: 20%;
+}
+
+.medicare .xpanel-wrapper-20 {
+    height: 20%;
+}
+
+.medicare .xpanel-wrapper-25 {
+    height: 25%;
+}
+
+.medicare .xpanel-wrapper-30 {
+    height: 30%;
+}
+
+.medicare .xpanel-wrapper-33 {
+    height: 33%;
+}
+
+.medicare .xpanel-wrapper-35 {
+    height: 35%;
+}
+
+.medicare .xpanel-wrapper-40 {
+    height: 40%;
+}
+
+.medicare .xpanel-wrapper-45 {
+    height: 40%;
+}
+
+.medicare .xpanel-wrapper-50 {
+    height: 50%;
+}
+
+.medicare .xpanel-wrapper-55 {
+    height: 55%;
+}
+
+.medicare .xpanel-wrapper-60 {
+    height: 60%;
+}
+
+.medicare .xpanel-wrapper-62 {
+    height: 62%;
+}
+
+.medicare .xpanel-wrapper-65 {
+    height: 65%;
+}
+
+.medicare .xpanel-wrapper-70 {
+    height: 70%;
+}
+
+.medicare .xpanel-wrapper-75 {
+    height: 75%;
+}
+
+.xpanel-display {
+    display: none;
+}
+
+.medicare .xpanel {
+    height: 100%;
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+.medicare .xpanel .chart-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.medicare .xpanel .chart-wrapper .chart {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+/* 违章停车 */
+
+@media (min-width: 1600px) {
+    .medicare .xpanel .violation-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .medicare .xpanel .violation-wrapper .item {
+        color: #fff;
+        padding-left: 2.6rem;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        width: 50%;
+        margin-top: 4%;
+    }
+    .medicare .xpanel .violation-wrapper .item>span {
+        color: #00ffef;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .xpanel .violation-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .medicare .xpanel .violation-wrapper .item {
+        color: #fff;
+        padding-left: 2.6rem;
+        padding-top: .5rem;
+        font-size: 1rem;
+        margin-top: 3%;
+        width: 50%;
+    }
+    .medicare .xpanel .violation-wrapper .item>span {
+        color: #00ffef;
+    }
+}
+
+
+/* 收费统计 */
+
+@media (min-width: 1600px) {
+    .medicare .order-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .medicare .xpanel .order-item {
+        color: #fff;
+        padding-left: 6%;
+        padding-top: 5%;
+        font-size: 1.2rem;
+        width: 50%;
+    }
+    .medicare .xpanel .order-item>span {
+        color: #00ffef;
+    }
+}
+
+@media(min-width: 960px) and (max-width: 1599px) {
+    .medicare .order-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .medicare .xpanel .order-item {
+        color: #fff;
+        padding-left: 6%;
+        padding-top: 4%;
+        font-size: 1rem;
+        width: 50%;
+    }
+    .medicare .xpanel .order-item>span {
+        color: #00ffef;
+    }
+}
+
+.medicare .xpanel-l-t {
+    background-image: url("../img/panel-l-t.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel-l-b {
+    background-image: url("../img/panel-l-b.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel-c-b {
+    background-image: url("../img/panel-c-b.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel-r-t {
+    background-image: url("../img/panel-r-t.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel-r-m {
+    background-image: url("../img/panel-r-m.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel-r-b {
+    background-image: url("../img/panel-r-b.png");
+    overflow: hidden;
+}
+
+.medicare .xpanel .title {
+    padding-left: 24px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+    background-image: url("../img/title-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.medicare .normalfont {
+    padding-left: 24px;
+    height: 44px;
+    line-height: 32px;
+    font-size: 19px;
+    font-weight: normal;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.medicare .smallfont {
+    padding-left: 24px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.medicare .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.medicare .list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* 账单 */
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .list-title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .medicare .list-title>div {
+        width: 22%;
+        color: #fff;
+        font-size: 1.1rem;
+        padding-right: .6rem;
+        padding-left: .5rem;
+    }
+    .medicare .list .list-item {
+        color: #00ffef;
+        font-size: 1rem;
+        font-weight: normal;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-left: 1rem;
+        padding-right: 1.6rem;
+        margin-top: .9rem;
+    }
+    .medicare .list .list-item>div {
+        width: 21.6%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1600px) {
+    .medicare .list-title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .medicare .list-title>div {
+        width: 22%;
+        color: #fff;
+        font-size: 1.2rem;
+        margin-left: .2rem;
+        text-align: center;
+    }
+    .medicare .list .list-item {
+        color: #00ffef;
+        font-size: 1.6rem;
+        font-weight: normal;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-left: 1.8rem;
+        /* padding-right: 1.6rem; */
+        margin-top: 2.3rem;
+    }
+    .medicare .list .list-item>div {
+        width: 22%;
+        text-align: center;
+        margin-left: .2rem;
+    }
+}
+
+
+/* 适配 不同屏幕*/
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .normalfontturq {
+        padding-left: 24px;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: #00ffef;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+/* 适配大屏 */
+
+@media (min-width: 1600px) {
+    .medicare .normalfontturq {
+        margin-top: .6rem;
+        padding-left: 24px;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #00ffef;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+/* 申诉工单 */
+
+.medicare .order-box .order-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* margin-top: 3%; */
+}
+
+.medicare .order-box .order-list-wrapper .order-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(min-width: 960px) and (max-width: 1599px) {
+    .medicare .order-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40%;
+    }
+    .medicare .order-box .order-list-wrapper .order-list>span {
+        color: #00ffef;
+        font-size: 1.2rem;
+    }
+    .medicare .order-list-wrapper .order-list>div {
+        color: #fff;
+        font-size: 1rem;
+        margin-top: .2rem;
+    }
+}
+
+@media(min-width: 1600px) {
+    .medicare .order-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50%;
+    }
+    .medicare .order-box .order-list-wrapper .order-list>span {
+        color: #00ffef;
+        font-size: 1.4rem;
+    }
+    .medicare .order-box .order-list-wrapper .order-list>div {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-top: .4rem;
+    }
+}
+
+
+/* 欠费追缴 */
+
+.medicare .arrwear-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .arrwear-wrapper .arrwear-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-top: 2%;
+    }
+    .medicare .arrwear-wrapper .arrwear-item>span {
+        color: #00ffef;
+        font-size: 1.2rem;
+    }
+    .medicare .arrwear-wrapper .arrwear-item>div {
+        color: #fff;
+        font-size: 1rem;
+        margin-top: .2rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .medicare .arrwear-wrapper .arrwear-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-top: 4%;
+    }
+    .medicare .arrwear-wrapper .arrwear-item>span {
+        color: #00ffef;
+        font-size: 1.4rem;
+    }
+    .medicare .arrwear-wrapper .arrwear-item>div {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-top: .4rem;
+    }
+}
+
+.medicare .largefont {
+    padding-left: 24px;
+    height: 9 0px;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #00ffef;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.medicare .xpanel .title-long {
+    background-image: url("../img/title-bg-long.png");
+}
+
+.medicare .spacer20 {
+    height: 20px;
+}
+
+.medicare .spacer15 {
+    height: 15px;
+}
+
+.medicare .spacer5 {
+    height: 5px;
+}
+
+.medicare .spacer7 {
+    height: 7px;
+}
+
+
+/* PC */
+
+@media (max-width:1599px) {
+    .medicare .xpanel .title {
+        padding-left: 20px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+    }
+}
+
+
+/* tool */
+
+.medicare .fill-h {
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+.medicare .no-margin {
+    margin: 0 !important;
+}
+
+.medicare .no-padding {
+    padding: 0 !important;
+}
+
+.medicare .no-bg {
+    background: none !important;
+}
+
+.medicare .no-border {
+    border: 0 !important;
+}
+
+.medicare .fstable {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.medicare .fstr {
+    display: table-row;
+}
+
+.medicare .fstd {
+    display: table-cell;
+}
+
+.medicare .mycol-l {
+    max-width: 23%;
+}
+
+.medicare .mycol-r {
+    max-width: 23%;
+}
+
+.medicare .mycol-c {
+    max-width: 50%;
+}
+
+.medicare .p20 {
+    width: 18%;
+}
+
+.medicare .p25 {
+    width: 25%;
+}
+
+.medicare .p30 {
+    width: 30%;
+}
+
+.medicare .p40 {
+    width: 40%;
+}
+
+.medicare .pl10 {
+    padding-left: 10px;
+}
+
+.medicare .ct {
+    text-align: center;
+}
+
+.medicare .t-r {
+    text-align: right;
+}
+
+.medicare .eventmsg {
+    margin: 3px;
+    color: white;
+}
+
+.medicare .eventmsgts {
+    font-size: 12px;
+}
+
+.medicare .eventbox {
+    width: 98%;
+    border: 1px solid blue;
+    padding: 0;
+    margin-left: 3px;
+    margin-top: 0;
+    margin-right: 6px;
+    margin-bottom: 3px;
+}
+
+.medicare .eventmsgtitle {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+.medicare .eventmsgtitle2 {
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+.medicare .eventmsgcontent {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+.medicare .eventmsgstatus {
+    float: right;
+    font-size: 10px;
+    /*line-height: 13px;  */
+    background: #0050ff;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.medicare .eventmsgid {
+    font-size: 10px;
+    font-family: Courier;
+    margin: 0;
+    padding-left: 3px;
+    line-height: 13px;
+}
+
+.medicare .eventmsgblue {
+    background: #0050ff;
+}
+
+.medicare .eventmsggreen {
+    background: #00cc50;
+}
+
+.medicare .eventmsggreen1 {
+    background: #009950;
+}
+
+.medicare .eventmsggreen2 {
+    background: #00aa50;
+}
+
+.medicare .eventmsggreen3 {
+    background: #00dd50;
+}
+
+.medicare .subtitle {
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+}
+
+.medicare .linemsg {
+    color: white;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 3px;
+}
+
+@keyframes colorGradual {
+    from {
+        background: #00dd50;
+    }
+    to {
+        background: #0050ff;
+    }
+}
+
+.status_bar {
+    animation: colorGradual 18s normal;
+}
+
+.medicare .blockTimestamp {
+    /* float: right; */
+    font-size: 10px;
+    background: #0050ff;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.medicare .darkblue {
+    background-color: #003366;
+}

@@ -1,0 +1,1824 @@
+{
+    "patients": [{
+            "name": "张三",
+            "hospital": "重庆医科大学附属第一医院",
+            "total_fee": 41154.5,
+            "detail": {
+                "hospital": "重庆医科大学附属第一医院",
+                "insurance_id": "248738",
+                "name": "张三",
+                "gender": "男",
+                "birthday": { "$date": "1933-07-04T00:54:57.333Z" },
+                "person_type": { "type": "离休", "comments": "年内第二次住院" },
+                "id_num": "130102193307042133",
+                "company": "中铁三局集团第二工程有限公司",
+                "doctor_info": { "name": "张慧聪", "hospital_rank": "三级医院" },
+                "admitted_date": { "$date": "2020-03-01T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-06-13T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 41154.5,
+                "deductible": 0,
+                "insurance_coverary": 41154.5,
+                "privous_payment": 0,
+                "payment": 40000,
+                "total_payment": 40000,
+                "western_medicine_fee": {
+                    "total": 19201.65,
+                    "list": [
+                        { "item": "哌拉西林他唑巴坦", "size": "1.25g", "unit": "", "retail": 59.42, "quantity": 29, "total": 1723.18, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" },
+                        { "item": "阿莫西林克拉维酸", "size": "0.3g", "unit": "", "retail": 35.8, "quantity": 166, "total": 5942.8, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" },
+                        { "item": "头孢哌酮舒巴坦", "size": "1.5g(1g/0.5g)", "unit": "", "retail": 68.21, "quantity": 107, "total": 7298.47, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" },
+                        { "item": "头孢他啶", "size": "1.0g", "unit": "", "retail": 47.08, "quantity": 90, "total": 4237.2, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 251.79,
+                    "list": [
+                        { "item": "淡豆豉", "size": "1", "unit": "", "retail": 0.0288, "quantity": 168, "total": 4.84, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" },
+                        { "item": "淡竹叶", "size": "1", "unit": "", "retail": 0.0288, "quantity": 875, "total": 25.2, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" },
+                        { "item": "金银花", "size": "1", "unit": "", "retail": 0.3168, "quantity": 700, "total": 221.75, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 111.5,
+                    "list": [
+                        { "item": "清开灵片（胶囊、颗粒、软胶囊）", "size": "1.5g*18袋", "unit": "", "retail": 1.2389, "quantity": 90, "total": 111.5, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" }
+                    ]
+                },
+                "diagnosis_fee": {
+                    "total": 2560,
+                    "list": [
+                        { "item": "红细胞比积测定(HCT)", "size": "", "unit": "项", "retail": 10, "quantity": 9, "total": 90, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" },
+                        { "item": "降钙素原检测（荧光定量法）", "size": "", "unit": "", "retail": 190, "quantity": 13, "total": 2470, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "check_fee": {
+                    "total": 1440,
+                    "list": [
+                        { "item": "住院诊察费", "size": "", "unit": "日", "retail": 20, "quantity": 72, "total": 1440, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "treatment_fee": {
+                    "total": 6880.56,
+                    "list": [
+                        { "item": "重症监护", "size": "", "unit": "小时", "retail": 8, "quantity": 860.07, "total": 6880.56, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 660,
+                    "list": [
+                        { "item": "吸痰护理", "size": "", "unit": "次", "retail": 6, "quantity": 110, "total": 660, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [
+                        { "item": "局部浸润麻醉", "size": "", "unit": "次", "retail": 50, "quantity": 1, "total": 50, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "material_fee": {
+                    "total": 5544,
+                    "list": [
+                        { "item": "导管（经血管介入诊疗）", "size": "", "unit": "个", "retail": 5500, "quantity": 1, "total": 5500, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" },
+                        { "item": "一次性吸痰管", "size": "", "unit": "套", "retail": 2.2, "quantity": 20, "total": 44, "out_of-pocket_payments": 0, "insurance_type": "乙类", "comments": "" }
+                    ]
+                },
+                "other_fee": {
+                    "total": 855,
+                    "list": [
+                        { "item": "膀胱冲洗", "size": "", "unit": "次", "retail": 19, "quantity": 45, "total": 855, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                },
+                "bed_fee": {
+                    "total": 3600,
+                    "list": [
+                        { "item": "新建病房三人间", "size": "", "unit": "", "retail": 50, "quantity": 72, "total": 3600, "out_of-pocket_payments": 0, "insurance_type": "甲类", "comments": "" }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "李四",
+            "hospital": "重庆医科大学附属第二医院",
+            "total_fee": 24364.6,
+            "detail": {
+                "hospital": "重庆医科大学附属第二医院",
+                "insurance_id": "384574",
+                "name": "李四",
+                "gender": "男",
+                "birthday": { "$date": "1955-08-04T00:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第一次住院"
+                },
+                "id_num": "131102195508042133",
+                "company": "重庆轻纺控股(集团)公司",
+                "doctor_info": {
+                    "name": "张于",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-03-01T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-05-11T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 24364.6,
+                "deductible": 0,
+                "insurance_coverary": 24364.6,
+                "privous_payment": 0,
+                "payment": 21000,
+                "total_payment": 21000,
+                "western_medicine_fee": {
+                    "total": 10690.25,
+                    "list": [{
+                            "item": "左氧氟沙星",
+                            "size": "2ml；0．1g",
+                            "unit": "",
+                            "retail": 10.39,
+                            "quantity": 224,
+                            "total": 2327.36,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "莫西沙星氯化钠",
+                            "size": "250ml：0．4g",
+                            "unit": "",
+                            "retail": 198,
+                            "quantity": 21,
+                            "total": 4158,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "注射用尼可地尔",
+                            "size": "12mg",
+                            "unit": "",
+                            "retail": 221.31,
+                            "quantity": 19,
+                            "total": 4204.89,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 3970.4,
+                    "list": [{
+                            "item": "红芪",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 29.8,
+                            "quantity": 14,
+                            "total": 417.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "川贝母",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 8.46,
+                            "quantity": 420,
+                            "total": 3553.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 220.95,
+                    "list": [{
+                        "item": "喜炎平注射液",
+                        "size": "2ml；50mg",
+                        "unit": "",
+                        "retail": 24.55,
+                        "quantity": 9,
+                        "total": 220.95,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "乙类",
+                        "comments": ""
+                    }]
+                },
+                "diagnosis_fee": {
+                    "total": 736,
+                    "list": [{
+                            "item": "血细胞分析",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 1,
+                            "quantity": 412,
+                            "total": 412,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "各种白介素测定化学发光法",
+                            "size": "",
+                            "unit": "",
+                            "retail": 36,
+                            "quantity": 9,
+                            "total": 324,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 720,
+                    "list": [{
+                        "item": "住院诊察费",
+                        "size": "",
+                        "unit": "日",
+                        "retail": 10,
+                        "quantity": 72,
+                        "total": 720,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "treatment_fee": {
+                    "total": 525,
+                    "list": [{
+                        "item": "Ⅱ级护理",
+                        "size": "",
+                        "unit": "日",
+                        "retail": 15,
+                        "quantity": 35,
+                        "total": 525,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "nursing_fee": {
+                    "total": 240,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 40,
+                        "total": 240,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 5522,
+                    "list": [{
+                            "item": "导管（经血管介入诊疗）",
+                            "size": "",
+                            "unit": "个",
+                            "retail": 5500,
+                            "quantity": 1,
+                            "total": 5500,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性吸痰管",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 2.2,
+                            "quantity": 10,
+                            "total": 22,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 190,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 10,
+                        "total": 190,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 1500,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 50,
+                        "quantity": 30,
+                        "total": 1500,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        },
+        {
+            "name": "王五",
+            "hospital": "川大华西医院",
+            "total_fee": 21520.27,
+            "detail": {
+                "hospital": "川大华西医院",
+                "insurance_id": "245455",
+                "name": "王五",
+                "gender": "男",
+                "birthday": { "$date": "1940-05-22T00:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第三次住院"
+                },
+                "id_num": "133102194005222198",
+                "company": "中国第一重型机械集团公司",
+                "doctor_info": {
+                    "name": "赵平",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-05-01T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-06-13T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 21520.27,
+                "deductible": 0,
+                "insurance_coverary": 21520.27,
+                "privous_payment": 0,
+                "payment": 20000,
+                "total_payment": 20000,
+                "western_medicine_fee": {
+                    "total": 6685.65,
+                    "list": [{
+                            "item": "美金刚",
+                            "size": "10mg*28T",
+                            "unit": "",
+                            "retail": 12.8632,
+                            "quantity": 112,
+                            "total": 1440.68,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "参芎葡萄糖注射液",
+                            "size": "50ml",
+                            "unit": "",
+                            "retail": 35.5,
+                            "quantity": 40,
+                            "total": 1420,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "矛头蝮蛇血凝酶",
+                            "size": "2iu",
+                            "unit": "",
+                            "retail": 64.83,
+                            "quantity": 59,
+                            "total": 3824.97,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 830.12,
+                    "list": [{
+                            "item": "太子参",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.576,
+                            "quantity": 1400,
+                            "total": 806.4,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "龙葵",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.027,
+                            "quantity": 840,
+                            "total": 22.72,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 111.5,
+                    "list": [{
+                        "item": "清开灵片（胶囊、颗粒、软胶囊）",
+                        "size": "1.5g*18袋",
+                        "unit": "",
+                        "retail": 1.2389,
+                        "quantity": 90,
+                        "total": 111.5,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "乙类",
+                        "comments": ""
+                    }]
+                },
+                "diagnosis_fee": {
+                    "total": 960,
+                    "list": [{
+                            "item": "血浆D-二聚体测定（D-Dimer)",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 40,
+                            "quantity": 14,
+                            "total": 560,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "血清肌钙蛋白T测定化学发光法",
+                            "size": "",
+                            "unit": "",
+                            "retail": 100,
+                            "quantity": 4,
+                            "total": 400,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 2290,
+                    "list": [{
+                        "item": "电脑血糖监测",
+                        "size": "",
+                        "unit": "每试验项目",
+                        "retail": 10,
+                        "quantity": 229,
+                        "total": 2290,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "treatment_fee": {
+                    "total": 2634,
+                    "list": [{
+                            "item": "动静脉置管护理",
+                            "size": "",
+                            "unit": "次",
+                            "retail": 9,
+                            "quantity": 276,
+                            "total": 2484,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "Ⅱ级护理",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 15,
+                            "quantity": 10,
+                            "total": 150,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 120,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 20,
+                        "total": 120,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 5544,
+                    "list": [{
+                            "item": "卫生材料费自费",
+                            "size": "",
+                            "unit": "个",
+                            "retail": 500,
+                            "quantity": 2,
+                            "total": 1000,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "丙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性吸痰管",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 2.2,
+                            "quantity": 20,
+                            "total": 44,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性输液器（精密输液器）",
+                            "size": "",
+                            "unit": "",
+                            "retail": 9.5,
+                            "quantity": 114,
+                            "total": 1083,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 855,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 45,
+                        "total": 855,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 1440,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 20,
+                        "quantity": 72,
+                        "total": 1440,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        },
+        {
+            "name": "钱国庆",
+            "hospital": "成都市第三人民医院",
+            "total_fee": 14726.495,
+            "detail": {
+                "hospital": "成都市第三人民医院",
+                "insurance_id": "245455",
+                "name": "钱国庆",
+                "gender": "男",
+                "birthday": { "$date": "1942-07-22T00:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第三次住院"
+                },
+                "id_num": "143102194207222158",
+                "company": "中国第一重型机械集团公司",
+                "doctor_info": {
+                    "name": "",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-03-01T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-04-13T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 14726.495,
+                "deductible": 0,
+                "insurance_coverary": 14726.495,
+                "privous_payment": 0,
+                "payment": 12000,
+                "total_payment": 12000,
+                "western_medicine_fee": {
+                    "total": 4805.83,
+                    "list": [{
+                            "item": "多巴丝肼",
+                            "size": "0．25g*40T",
+                            "unit": "",
+                            "retail": 2.028,
+                            "quantity": 80,
+                            "total": 162.24,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "喹硫平",
+                            "size": "25mg*20T",
+                            "unit": "",
+                            "retail": 4.387,
+                            "quantity": 100,
+                            "total": 438.7,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "注射用尼可地尔",
+                            "size": "12mg",
+                            "unit": "",
+                            "retail": 221.32,
+                            "quantity": 19,
+                            "total": 4204.89,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 598.72,
+                    "list": [{
+                            "item": "太子参",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.576,
+                            "quantity": 1000,
+                            "total": 576,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "龙葵",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.027,
+                            "quantity": 840,
+                            "total": 22.72,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 61.945,
+                    "list": [{
+                        "item": "清开灵片（胶囊、颗粒、软胶囊）",
+                        "size": "1.5g*18袋",
+                        "unit": "",
+                        "retail": 1.2389,
+                        "quantity": 50,
+                        "total": 61.945,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "乙类",
+                        "comments": ""
+                    }]
+                },
+                "diagnosis_fee": {
+                    "total": 1800,
+                    "list": [{
+                            "item": "血浆D-二聚体测定（D-Dimer)",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 40,
+                            "quantity": 20,
+                            "total": 800,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "血清肌钙蛋白T测定化学发光法",
+                            "size": "",
+                            "unit": "",
+                            "retail": 100,
+                            "quantity": 10,
+                            "total": 1000,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 720,
+                    "list": [{
+                        "item": "电脑血糖监测",
+                        "size": "",
+                        "unit": "每试验项目",
+                        "retail": 10,
+                        "quantity": 72,
+                        "total": 720,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "treatment_fee": {
+                    "total": 1950,
+                    "list": [{
+                            "item": "动静脉置管护理",
+                            "size": "",
+                            "unit": "次",
+                            "retail": 9,
+                            "quantity": 200,
+                            "total": 1800,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "Ⅱ级护理",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 15,
+                            "quantity": 10,
+                            "total": 150,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 120,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 20,
+                        "total": 120,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 2670,
+                    "list": [{
+                            "item": "卫生材料费自费",
+                            "size": "",
+                            "unit": "个",
+                            "retail": 500,
+                            "quantity": 3,
+                            "total": 1500,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "丙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性吸痰管",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 2.2,
+                            "quantity": 100,
+                            "total": 220,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性输液器（精密输液器）",
+                            "size": "",
+                            "unit": "",
+                            "retail": 9.5,
+                            "quantity": 100,
+                            "total": 950,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 950,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 50,
+                        "total": 950,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 1000,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 20,
+                        "quantity": 50,
+                        "total": 1000,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        },
+        {
+            "name": "宋建勇",
+            "hospital": "北京协和医院",
+            "total_fee": 29119.86,
+            "detail": {
+                "hospital": "北京协和医院",
+                "insurance_id": "124274",
+                "name": "宋建勇",
+                "gender": "男",
+                "birthday": { "$date": "1979-02-16T09:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第一次住院"
+                },
+                "id_num": "330116297902162283",
+                "company": "杭州长运西北汽车客运有限公司",
+                "doctor_info": {
+                    "name": "张英杰",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-06-14T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-07-11T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 29119.86,
+                "deductible": 0,
+                "insurance_coverary": 29119.86,
+                "privous_payment": 0,
+                "payment": 29000,
+                "total_payment": 29000,
+                "western_medicine_fee": {
+                    "total": 6935.41,
+                    "list": [{
+                            "item": "注射用尼可地尔",
+                            "size": "12mg",
+                            "unit": "",
+                            "retail": 221.31,
+                            "quantity": 19,
+                            "total": 4204.89,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "参芎葡萄糖注射液",
+                            "size": "50ml",
+                            "unit": "",
+                            "retail": 35.5,
+                            "quantity": 40,
+                            "total": 1420.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "复方阿嗪米特",
+                            "size": "复方*20T",
+                            "unit": "",
+                            "retail": 1.5105,
+                            "quantity": 240,
+                            "total": 362.52,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "肠内营养剂(TPF)",
+                            "size": "500ml（1kcal/ml）",
+                            "unit": "",
+                            "retail": 39.5,
+                            "quantity": 24,
+                            "total": 948.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 461.24,
+                    "list": [{
+                            "item": "茯苓",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.0918,
+                            "quantity": 1225,
+                            "total": 112.45,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "防风(颗粒)",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.2388,
+                            "quantity": 532,
+                            "total": 127.04,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "金银花",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.3168,
+                            "quantity": 700,
+                            "total": 221.75,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 220.95,
+                    "list": [{
+                        "item": "喜炎平注射液",
+                        "size": "2ml；50mg",
+                        "unit": "",
+                        "retail": 24.55,
+                        "quantity": 9,
+                        "total": 220.95,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "乙类",
+                        "comments": ""
+                    }]
+                },
+                "diagnosis_fee": {
+                    "total": 562,
+                    "list": [{
+                            "item": "红细胞比积测定(HCT)",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 10,
+                            "quantity": 9,
+                            "total": 90,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "血细胞分析",
+                            "size": "",
+                            "unit": "",
+                            "retail": 1,
+                            "quantity": 412,
+                            "total": 412.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "血浆乳酸测定",
+                            "size": "",
+                            "unit": "",
+                            "retail": 10,
+                            "quantity": 6,
+                            "total": 60.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 2760,
+                    "list": [{
+                            "item": "住院诊察费",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 20,
+                            "quantity": 72,
+                            "total": 1440,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "X线计算机体层(CT)扫描（使用螺旋扫描加收）",
+                            "size": "",
+                            "unit": "每个部位",
+                            "retail": 60,
+                            "quantity": 22,
+                            "total": 1320.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "treatment_fee": {
+                    "total": 7405.56,
+                    "list": [{
+                            "item": "重症监护",
+                            "size": "",
+                            "unit": "小时",
+                            "retail": 8,
+                            "quantity": 860.07,
+                            "total": 6880.56,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "Ⅱ级护理",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 15,
+                            "quantity": 35,
+                            "total": 525.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 660,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 110,
+                        "total": 660,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 5609.7,
+                    "list": [{
+                            "item": "导管（经血管介入诊疗）",
+                            "size": "",
+                            "unit": "个",
+                            "retail": 5500,
+                            "quantity": 1,
+                            "total": 5500,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性吸痰管",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 2.2,
+                            "quantity": 20,
+                            "total": 44,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "尿袋",
+                            "size": "",
+                            "unit": "",
+                            "retail": 65.7,
+                            "quantity": 1,
+                            "total": 65.7,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 855,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 45,
+                        "total": 855,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 3600,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 50,
+                        "quantity": 72,
+                        "total": 3600,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        },
+        {
+            "name": "徐鹏",
+            "hospital": "上海长征医院",
+            "total_fee": 62975.18,
+            "detail": {
+                "hospital": "上海长征医院",
+                "insurance_id": "184574",
+                "name": "徐鹏",
+                "gender": "男",
+                "birthday": { "$date": "1985-11-24T00:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第一次住院"
+                },
+                "id_num": "131102198511249033",
+                "company": "重庆九八六食品有限公司",
+                "doctor_info": {
+                    "name": "俞晓红",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-07-21T00:54:57.333Z" },
+                "discharge_date": { "$date": "2020-08-11T00:54:57.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 62975.18,
+                "deductible": 0,
+                "insurance_coverary": 62975.18,
+                "privous_payment": 0,
+                "payment": 60000,
+                "total_payment": 60000,
+                "western_medicine_fee": {
+                    "total": 10192.7,
+                    "list": [{
+                            "item": "阿莫西林克拉维酸",
+                            "size": "0．3g",
+                            "unit": "",
+                            "retail": 35.8,
+                            "quantity": 166,
+                            "total": 5942.8,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "布洛芬",
+                            "size": "0．3g*20S",
+                            "unit": "",
+                            "retail": 0.6485,
+                            "quantity": 20,
+                            "total": 12.97,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "头孢他啶",
+                            "size": "1.0g",
+                            "unit": "",
+                            "retail": 47.08,
+                            "quantity": 90,
+                            "total": 4237.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 359.4,
+                    "list": [{
+                            "item": "茯苓",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.0918,
+                            "quantity": 1225,
+                            "total": 112.45,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "淡竹叶",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.0288,
+                            "quantity": 875,
+                            "total": 25.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "金银花",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.3168,
+                            "quantity": 700,
+                            "total": 221.75,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 4446.23,
+                    "list": [{
+                            "item": "血速升颗粒",
+                            "size": "10g*10袋",
+                            "unit": "",
+                            "retail": 18.8,
+                            "quantity": 220,
+                            "total": 4136.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "枳术宽中胶囊",
+                            "size": "0．43g*30S",
+                            "unit": "",
+                            "retail": 1.149,
+                            "quantity": 270,
+                            "total": 310.23,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "diagnosis_fee": {
+                    "total": 2740,
+                    "list": [{
+                            "item": "红细胞比积测定(HCT)",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 10,
+                            "quantity": 9,
+                            "total": 90,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "氯测定离子选择电极法",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 10,
+                            "quantity": 18,
+                            "total": 180,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "降钙素原检测（荧光定量法）",
+                            "size": "",
+                            "unit": "",
+                            "retail": 190,
+                            "quantity": 13,
+                            "total": 2470,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 9928.7,
+                    "list": [{
+                            "item": "住院诊察费",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 20,
+                            "quantity": 72,
+                            "total": 1440,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "心电监测",
+                            "size": "",
+                            "unit": "小时",
+                            "retail": 5,
+                            "quantity": 1697.74,
+                            "total": 8488.7,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "treatment_fee": {
+                    "total": 22934.55,
+                    "list": [{
+                            "item": "重症监护",
+                            "size": "",
+                            "unit": "小时",
+                            "retail": 8,
+                            "quantity": 860.07,
+                            "total": 6880.56,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "无创辅助通气",
+                            "size": "",
+                            "unit": "小时",
+                            "retail": 13,
+                            "quantity": 1711.23,
+                            "total": 22245.99,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 660,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 110,
+                        "total": 660,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 7258.6,
+                    "list": [{
+                            "item": "导管（经血管介入诊疗）",
+                            "size": "",
+                            "unit": "个",
+                            "retail": 5500,
+                            "quantity": 1,
+                            "total": 5500,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "一次性吸痰管",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 2.2,
+                            "quantity": 723,
+                            "total": 1590.6,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "卫生材料费自费",
+                            "size": "",
+                            "unit": "次",
+                            "retail": 42,
+                            "quantity": 4,
+                            "total": 168.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "丙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 855,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 45,
+                        "total": 855,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 3600,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 50,
+                        "quantity": 72,
+                        "total": 3600,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        },
+        {
+            "name": "赵孟",
+            "hospital": "北京积水潭医院",
+            "total_fee": 37806.93,
+            "detail": {
+                "hospital": "北京积水潭医院",
+                "insurance_id": "334674",
+                "name": "赵孟",
+                "gender": "男",
+                "birthday": { "$date": "1979-02-09T00:54:57.333Z" },
+                "person_type": {
+                    "type": "离休",
+                    "comments": "年内第一次住院"
+                },
+                "id_num": "510105197902098990",
+                "company": "四川永志立创网络发展有限公司",
+                "doctor_info": {
+                    "name": "吴磊",
+                    "hospital_rank": "二级医院"
+                },
+                "admitted_date": { "$date": "2020-04-17T09:50:50.333Z" },
+                "discharge_date": { "$date": "2020-05-21T09:50:50.333Z" },
+                "discharge_diagnosis": "慢性阻塞性肺病伴急性加重",
+                "department": "呼吸二科",
+                "total_fee": 37806.93,
+                "deductible": 0,
+                "insurance_coverary": 37806.93,
+                "privous_payment": 0,
+                "payment": 40000,
+                "total_payment": 40000,
+                "western_medicine_fee": {
+                    "total": 17502.86,
+                    "list": [{
+                            "item": "头孢哌酮舒巴坦",
+                            "size": "1．5g（1g/0．5g）",
+                            "unit": "",
+                            "retail": 68.21,
+                            "quantity": 107,
+                            "total": 7298.47,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "阿莫西林克拉维酸",
+                            "size": "0.3g",
+                            "unit": "",
+                            "retail": 35.8,
+                            "quantity": 166,
+                            "total": 5942.8,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "注射用尼可地尔",
+                            "size": "12mg",
+                            "unit": "",
+                            "retail": 221.31,
+                            "quantity": 19,
+                            "total": 4204.89,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "葡萄糖",
+                            "size": "5%：100ml",
+                            "unit": "",
+                            "retail": 6.3,
+                            "quantity": 9,
+                            "total": 56.7,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_medicine": {
+                    "total": 325.1,
+                    "list": [{
+                            "item": "灯心草",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.612,
+                            "quantity": 350,
+                            "total": 214.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "白茅根",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.0396,
+                            "quantity": 2100,
+                            "total": 83.2,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "蜜紫菀",
+                            "size": "1",
+                            "unit": "",
+                            "retail": 0.0792,
+                            "quantity": 350,
+                            "total": 27.7,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "chinese_patent_medicine": {
+                    "total": 89.91,
+                    "list": [{
+                        "item": "27.70",
+                        "size": "0．28g*36S",
+                        "unit": "",
+                        "retail": 0.8325,
+                        "quantity": 108,
+                        "total": 89.91,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "乙类",
+                        "comments": ""
+                    }]
+                },
+                "diagnosis_fee": {
+                    "total": 470,
+                    "list": [{
+                            "item": "血浆D-二聚体测定（D-Dimer)",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 40,
+                            "quantity": 1,
+                            "total": 40,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "血清淀粉样蛋白测定(SAA)定量加收",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 40,
+                            "quantity": 7,
+                            "total": 280,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "感染免疫学检测化学发光法定量加收",
+                            "size": "",
+                            "unit": "项",
+                            "retail": 30,
+                            "quantity": 5,
+                            "total": 150,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "丙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "check_fee": {
+                    "total": 3730,
+                    "list": [{
+                            "item": "住院诊察费",
+                            "size": "",
+                            "unit": "日",
+                            "retail": 20,
+                            "quantity": 72,
+                            "total": 1440,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "电脑血糖监测",
+                            "size": "",
+                            "unit": "每试验项目",
+                            "retail": 10,
+                            "quantity": 229,
+                            "total": 2290.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "treatment_fee": {
+                    "total": 8514.06,
+                    "list": [{
+                            "item": "重症监护",
+                            "size": "",
+                            "unit": "小时",
+                            "retail": 8,
+                            "quantity": 860.07,
+                            "total": 6880.56,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "肌肉注射（皮试）",
+                            "size": "",
+                            "unit": "次",
+                            "retail": 2,
+                            "quantity": 6,
+                            "total": 12,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "药物罐",
+                            "size": "",
+                            "unit": "单罐",
+                            "retail": 4.7,
+                            "quantity": 345,
+                            "total": 1621.5,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "甲类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "nursing_fee": {
+                    "total": 660,
+                    "list": [{
+                        "item": "吸痰护理",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 6,
+                        "quantity": 110,
+                        "total": 660,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "surgery_fee": {
+                    "total": 50,
+                    "list": [{
+                        "item": "局部浸润麻醉",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 50,
+                        "quantity": 1,
+                        "total": 50,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "material_fee": {
+                    "total": 2010,
+                    "list": [{
+                            "item": "中心静脉套件",
+                            "size": "",
+                            "unit": "套",
+                            "retail": 1850,
+                            "quantity": 1,
+                            "total": 1850.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "乙类",
+                            "comments": ""
+                        },
+                        {
+                            "item": "卫生材料费自费",
+                            "size": "",
+                            "unit": "次",
+                            "retail": 160,
+                            "quantity": 1,
+                            "total": 160.0,
+                            "out_of-pocket_payments": 0,
+                            "insurance_type": "丙类",
+                            "comments": ""
+                        }
+                    ]
+                },
+                "other_fee": {
+                    "total": 855,
+                    "list": [{
+                        "item": "膀胱冲洗",
+                        "size": "",
+                        "unit": "次",
+                        "retail": 19,
+                        "quantity": 45,
+                        "total": 855,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                },
+                "bed_fee": {
+                    "total": 3600,
+                    "list": [{
+                        "item": "新建病房三人间",
+                        "size": "",
+                        "unit": "",
+                        "retail": 50,
+                        "quantity": 72,
+                        "total": 3600,
+                        "out_of-pocket_payments": 0,
+                        "insurance_type": "甲类",
+                        "comments": ""
+                    }]
+                }
+            }
+        }
+
+    ]
+}

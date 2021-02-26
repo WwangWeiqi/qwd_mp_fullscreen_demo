@@ -1,0 +1,242 @@
+html,
+body {
+  display: block;
+  margin: 0px;
+  background-color: #0b0f34 !important;
+}
+
+.pages {
+  display: block;
+  margin: 0px;
+  background-color: #0b0f34 !important;
+}
+
+.pages .header {
+  background-color: #12308c;
+  overflow: hidden;
+  height: 3.8rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3.8rem;
+  font-family: 'Roboto';
+  font-size: 1.7rem;
+  color: rgba(255, 255, 255, 1);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* fix financialinstitute */
+.financialinstitute-box {
+  padding-top: 3.8rem;
+}
+
+.pages .spacer {
+  height: 50px;
+}
+
+/* .pages .legalcollecting-box {
+  margin-top: 3.8rem;
+} */
+
+.pages .wrapper {
+  /*width: 60%;*/
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3.8rem;
+  margin-bottom: 3rem;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.pages .statusbar {
+  background-color: #5b9bd5;
+  position: sticky;
+  top: 5rem;
+  right: 0;
+}
+
+.pages .smalltitle {
+  font-family: 'Roboto';
+  font-size: 22px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.pages .dashboardtable {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+
+.pages .dashboardtable .td3 {
+  width: 33%;
+}
+
+.pages .dashboardtable .td2 {
+  width: 50%;
+}
+
+.pages .dashboardtable .td4 {
+  width: 25%;
+}
+
+.pages .dashboardtable .dashboardsmallft {
+  font-size: 20px;
+}
+
+.pages .centeredtext {
+  text-align: center;
+}
+
+.ui.selection.dropdown.modaldropdown {
+  margin: 15px;
+}
+
+.modalmsg {
+  margin: 15px;
+}
+
+.pages .normaltitle {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+
+.pages .normaltitle2 {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+
+.pages .normaltitle3 {
+  text-align: center;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+
+.pages .segmenttable {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+
+.pages .segmenttable .td60 {
+  width: 90%;
+}
+
+.pages .segmenttable .td40 {
+  width: 40%;
+}
+
+.pages .segmenttable .td3 {
+  width: 33%;
+}
+
+.pages .segmenttable .td2 {
+  width: 50%;
+}
+
+.pages .segmenttable .td4 {
+  width: 25%;
+}
+
+.pages .paddedsegment {
+  padding: 14px;
+}
+
+.pages .blueseg {
+  background: #262647 !important;
+}
+
+.smallinput {
+  width: 20px !important;
+}
+
+.platechar0 {
+  /*width: 60px;*/
+}
+
+.platechar1 {
+  width: 60px;
+}
+
+.platechar2 {
+  width: 60px;
+}
+
+.platechar3 {
+  width: 60px;
+}
+
+.platechar4 {
+  width: 60px;
+}
+
+.platechar5 {
+  width: 60px;
+}
+
+.platechar6 {
+  width: 60px;
+}
+
+.platechar7 {
+  width: 60px;
+}
+
+.platechar480 {
+  width: 480pxz !important;
+}
+
+.platechar60 {
+  width: 60px;
+}
+
+.width120 {
+  width: 120px;
+}
+
+.width195 {
+  width: 195px;
+}
+
+.width100 {
+  width: 100px;
+}
+
+.width124 {
+  width: 124px;
+}
+
+/* financecenter page css */
+.financecenter-table-box {
+  background-color: #fff;
+  position: relative;
+  border-radius: .3rem;
+}
+
+.financecenter_pagination_wrapper {
+  padding-right: 1rem;
+  margin-top: -1rem;
+}
+
+/* 修改table选择居中功能 */
+.select-checkbox-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.detail {
+  cursor: pointer;
+  color: #66c2ff;
+  text-decoration: underline;
+}

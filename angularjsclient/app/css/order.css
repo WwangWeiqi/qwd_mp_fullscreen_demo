@@ -1,0 +1,124 @@
+@media (min-width: 992px) and (max-width: 1599px) {
+    .order-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1600px) {
+    .order-wrapper {
+        width: 68%;
+        margin: 0 auto;
+    }
+}
+
+
+
+.order-detail-wraper {
+    margin-top: 3rem;
+    /* margin-left: 3.6rem; */
+}
+
+.order-detail-wraper .order-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    opacity: .82;
+    font-family: SourceHanSansSC-regular;
+}
+
+.order-content-wraper {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    padding-bottom: 2rem;
+    justify-content: space-between;
+}
+.order-content {
+    margin-top: 38px;
+    /* margin-left: 50px; */
+    width: 40rem;
+    height: 42rem;
+    background: #262647;
+    padding: 2rem;
+}
+
+.order-content .order-list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.8rem 0;
+}
+
+.order-content .order-list-box .text {
+    color: white;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+.order-player-wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-player-wraper .order-player-box {
+    margin-top: 38px;
+    margin-left: 50px;
+    width: 38rem;
+    height: 30rem;
+    background: #262647;
+    padding: 2rem;
+}
+
+.order-player-box .order-player-list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.8rem 0;
+}
+
+.order-player-list-box .player-text {
+    color: white;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-left: 1rem;
+    /* 自动换行 */
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.order-player-box .order-price-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 4.5rem;
+}
+
+.order-price-box .order-price-text {
+    color: white;
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+.order-price-box .order-prics-num {
+    color: white;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.order-player-wraper .btn-box {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 38rem;
+    justify-content: space-between;
+    /* margin-bottom: 2rem; */
+}
+
+.order-player-wraper .btn-box .button {
+    width: 216px !important;
+    justify-content: center;
+}

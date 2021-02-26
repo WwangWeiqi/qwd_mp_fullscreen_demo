@@ -1,0 +1,600 @@
+.header-top-box {
+    height: 3.8rem;
+    width: 100%;
+    background-color: #12308C;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+.header-top-box .header-title {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
+/* 最外层 元素 */
+
+.camera-wrapper {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.form-camera-container {
+    width: 22%;
+    margin-top: 2rem;
+    /* relative 实现吸顶 */
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.form-camera-postions-fixed {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 5rem;
+    right: 0;
+    margin-left: 2rem;
+}
+
+.form-camera-container .select-top-box-camera {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    background-color: white;
+    /*margin-top: 3rem;*/
+    /* padding: 1rem; */
+    border-radius: .3rem;
+}
+
+.form-camera-container .select-top-box-camera .inquiry-box {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1.3rem 1.3rem 1rem 1.5rem;
+    color: #333;
+    border-bottom: .2px solid #8d88885b;
+}
+
+.form-camera-container .select-top-box-camera .select-box {
+    width: 94%;
+    margin-right: .5rem;
+    margin-top: 1rem;
+    margin-left: .5rem;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+.form-camera-container .select-top-box-camera .select-plate-box {
+    width: 88%;
+    /* margin: 0 auto; */
+    height: 3rem;
+    padding-left: .3rem;
+    display: flex;
+    align-self: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+.form-camera-container .select-top-box-camera .select-plate-box>input {
+    width: 100%;
+    height: 100%;
+    padding: .4rem;
+}
+
+/* 新增编辑css */
+/* .addcamera .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.addcamera .flex>span {
+    font-size: 1.2rem;
+    color: #333;
+}
+.addcamera .flex>input {
+    width: 80%;
+} */
+
+/* 去除默认padding */
+.ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"] {
+    padding: 0 !important;
+}
+.md-datepicker-input-container {
+    width: 88%;
+}
+
+.form-camera-container .select-top-box-camera .select-date {
+    width: 88%;
+    display: flex;
+    align-items: center;
+    padding-right: .2rem;
+    margin-top: 1rem;
+    margin-left: .1rem;
+    margin-right: .1rem;
+    justify-content: space-between;
+    align-self: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+.form-camera-container .select-top-box-camera .select-date .date-box {
+    /* width: 45%; */
+}
+
+/* 去除默认选择框底部样式 */
+.md-datepicker-input-container {
+    border-bottom-width: none !important;
+    border-bottom-style: none !important;
+}
+.ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"] {
+    border: none !important;
+    border-radius: none !important;
+}
+
+
+/* 统计css */
+
+.statistical-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2185D0;
+    border-radius: .3rem;
+}
+
+.statistical-box .total-price-box {
+    width: 45%;
+    height: 8rem;
+    /* background-color: #2185D0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.statistical-box .search-statistical {
+    width: 45%;
+    height: 8rem;
+    /* background-color: #2185D0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+}
+
+.search-statistical .statistical-number {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.search-statistical .statistical-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: .5rem;
+    margin-left: .4rem;
+}
+
+.total-price-box .price-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: .5rem;
+    margin-left: .4rem;
+}
+
+.total-price-box .price-number {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+
+/* 按钮外部样式 */
+
+.select-top-box-camera .btn-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: center;
+    /* padding-left: .5rem;
+    padding-right: .5rem;
+    justify-content: space-between; */
+}
+
+.select-top-box-camera .btn-wrapper .top-button {
+    width: 40%;
+    height: 2.8rem;
+    margin-left: .5rem;
+}
+
+.form-content-box {
+    width: 78%;
+    /* height: 100%; */
+    min-height: 85vh;
+    margin-top: 2rem;
+    overflow: hidden;
+    background-color: white;
+    border-radius: .2rem;
+    padding-bottom: 3.5rem;
+}
+
+.form-content-box .detail {
+    cursor: pointer;
+    color: #66c2ff;
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+
+/* 账单状态 */
+
+.form-content-box .status {
+    color: #FF0000;
+}
+
+.form-content-box .note {
+    color: #FF6800;
+}
+
+.form-content-box .riks {
+    color: #FF6800;
+}
+
+.form-content-box .nav-box {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 分页 */
+
+.form-content-box .pagination-wrapper {
+    padding-bottom: 3rem;
+    margin-right: 1rem;
+}
+
+.form-content-box .pagination-wrapper .pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    float: right;
+    /* 左浮动 */
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+
+/* 选中 active */
+
+
+/* .pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+} */
+
+
+/* .pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+
+.pagination li a.active {
+    background-color: #1eb13c;
+    color: white;
+    border: .5px solid #1eb13c;
+    border-radius: 5px;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+    /* border-radius: 5px; */
+}
+
+.form-content-box .nav-box .nav-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    border-radius: .1rem;
+    border: .1rem solid #FF0000;
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: .2rem;
+}
+
+.btn-box .button {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.features {
+    background-color: #fff;
+}
+
+
+/* 修改 input 默认样式 */
+
+
+/* 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: all .5s;
+}
+
+input[type="checkbox"]:checked+label:before {
+    background: red;
+} */
+
+.pagination_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 1rem;
+    position: absolute;
+    bottom: -.3rem;
+    right: 24%;
+}
+
+
+
+.camera_form-group {
+    margin-bottom: 1rem;
+}
+.camera_form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-content-box .detail-button-blue {
+    cursor: pointer;
+    color: #66c2ff;
+    text-decoration: none;
+}
+.form-content-box .detail-button-red {
+    cursor: pointer;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+
+.el-button--primary {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    font-size: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #dcdfe6;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    padding: 7px 13px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.el-button--danger {
+    color: #fff;
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+    font-size: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #dcdfe6;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    padding: 7px 13px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.select-window-style{
+    font-size:1rem;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 100%
+}
+
+.fa2{
+    background: orange;
+}
+.fa3{
+    background:green
+}
+.fa4{
+    background:red
+}
+
+.space2{
+    background: orange;
+}
+.space1{
+    background:green
+}
+.space3{
+    background:red
+}
+
+.xpanel-wrapper {padding-bottom:10px;box-sizing:border-box;}
+.xpanel-wrapper {height:100%;}
+.xpanel-wrapper-5 {height:5%;}
+.xpanel-wrapper-10 {height:10%;}
+.xpanel-wrapper-15 {height:15%;}
+.xpanel-wrapper-20 {height:20%;}
+.xpanel-wrapper-25 {height:25%;}
+.xpanel-wrapper-30 {height:30%;}
+.xpanel-wrapper-35 {height:35%;}
+.xpanel-wrapper-40 {height:40%;}
+.xpanel-wrapper-45 {height:45%;}
+.xpanel-wrapper-50 {height:50%;}
+.xpanel-wrapper-60 {height:60%;}
+.xpanel-wrapper-65 {height:65%;}
+.xpanel-wrapper-70 {height:70%;}
+.xpanel-wrapper-75 {height:75%;}
+.xpanel {
+    height:100%;
+    min-height:100px;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    box-sizing:border-box;
+}
+.xpanel .title {
+    padding-left:24px;
+    height:44px;
+    line-height:44px;
+    font-size:24px;
+    font-weight:normal;
+    color:#fff;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.normalfont {
+    padding-left:24px;
+    height:44px;
+    line-height:44px;
+    font-size:22px;
+    font-weight:normal;
+    color:#fff;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.smallfont {
+    padding-left:24px;
+    height:20px;
+    line-height:20px;
+    font-size:16px;
+    font-weight:normal;
+    color:#fff;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.normalfontturq {
+    padding-left:24px;
+    height:44px;
+    line-height:44px;
+    font-size:22px;
+    font-weight:normal;
+    color:#00ffef;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.largefont {
+    padding-left:24px;
+    height:9	0px;
+    line-height:90px;
+    font-size:30px;
+    font-weight:normal;
+    color:#00ffef;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+/* PC */
+@media (max-width:1919px) {
+    .xpanel .title {padding-left:20px;height:36px;line-height:36px;font-size:20px;}
+}
+
+/* tool */
+.fill-h {height:100% !important;min-height:100% !important;}
+.no-margin {margin:0 !important;}
+.no-padding {padding:0 !important;}
+.no-bg {background:none !important;}
+.no-border {border:0 !important;}
+
+/* scrollbar */
+::-webkit-scrollbar {width:0;height:0;}
+::-webkit-scrollbar-track {background-color:transparent;}
+::-webkit-scrollbar-thumb {border-radius:5px;background-color:rgba(0, 0, 0, 0.3);}
+.nf-chart{
+    width:100%;
+    height:220px;
+    float:left;
+}
+
+.material-icons{
+    display: inline-block;
+    position: relative;
+    left: 16px;
+    top: -348px;
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="cityParkingApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>启文达 展示中心</title>
+
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/semantic.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <link rel="stylesheet" href="css/billdetail.css" />
+    <link rel="stylesheet" href="css/blockdetail.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/moneymanagement.css" />
+    <link rel="stylesheet" href="css/legalcollecting.css" />
+    <link rel="stylesheet" href="css/systemsetting.css" />
+    <link rel="stylesheet" href="css/authandstandard.css" />
+    <link rel="stylesheet" href="css/camerasetting.css" />
+    <link rel="stylesheet" href="css/parkmain.css" />
+    <link rel="stylesheet" href="css/medicare.css" />
+    <link rel="stylesheet" href="lib/pagination/css/pagination.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Angular Material CSS now available via Google CDN; version 1.1.24 used here -->
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <!-- <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" /> -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/echarts.js"></script>
+    <script src="lib/leaflet.js"></script>
+    <script src="lib/echarts-leaflet.js"></script>
+    <script src="lib/echarts-wordcloud.min.js"></script>
+    <script src="lib/echarts-liquidfill.min.js"></script>
+    <script src="lib/semantic.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="components/medicare/medicare.module.js"></script>
+    <script src="components/medicare/medicare.component.js"></script>
+
+    <script src="lib/pagination/js/tm.pagination.min.js"></script>
+    <script src="service/apiService.js"></script>
+    <script src="service/pluginService.js"></script>
+    <!-- Angular Material Dependencies -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-aria.min.js"></script>
+    <script src="lib/angular-messages.min.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 1.1.24 used here -->
+    <script src="lib/angular-material.min.js"></script>
+    <!-- pagination -->
+
+    <!-- baidu map -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=9kRHqcpT95iC8oYI8kgZuHfEyfrIThGh"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script> -->
+    <!-- <script src="http://mapv.baidu.com/build/mapv.min.js"></script> -->
+    <script src="lib/mapv.min.js"></script>
+    <script src="lib/leaflet-echarts3.min.js"></script>
+</head>
+
+<div id="loader" style="display: none;background-color: rgba(0,0,0,.8);width: 100%;height:100%;position: fixed;z-index: 9999;">
+    <md-progress-circular class="md-accent" md-diameter="50" style="top:48%;left:48%"></md-progress-circular>
+    <!-- <label style="color:rgba(255,255,255,.9);font-weight: bold;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;font-size:1.1rem">Loading...</label> -->
+</div>
+
+<ng-view></ng-view>
+
+</html>

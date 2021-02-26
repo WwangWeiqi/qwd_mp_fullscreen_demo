@@ -1,0 +1,15 @@
+{
+    "apps": 
+    [
+      {
+        "name": "consensus-worker",
+        "cwd": "/home/ubuntu/consensuspoc/worker",
+        "script": "app.js"
+      },
+      {
+        "name": "consensus-server",
+        "cwd": "/home/ubuntu/consensuspoc/server",
+        "script": "app.js"
+      }
+    ]
+  }

@@ -1,0 +1,167 @@
+@media (min-width: 992px) and (max-width: 1599px) {
+    .bill-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .bill-wrapper {
+        width: 68%;
+        margin: 0 auto;
+        padding-top: 6rem;
+    }
+}
+
+.bill-detail-wraper .bill-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    opacity: .82;
+    font-family: SourceHanSansSC-regular;
+}
+
+.bill-content-wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    padding-bottom: 2rem;
+    justify-content: space-between;
+}
+
+
+/* .bill-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+.bill-content {
+    margin-top: 38px;
+    /* margin-left: 50px; */
+    width: 40rem;
+    height: 42rem;
+    background: #262647;
+    padding: 2rem;
+}
+
+.bill-content .bill-list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.bill-content .bill-list-box .text {
+    color: white;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+.bill-player-wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill-player-wraper .bill-player-box {
+    margin-top: 26px;
+    margin-left: 50px;
+    width: 38rem;
+    height: 30rem;
+    background: #262647;
+    padding: 2rem;
+}
+
+.bill-player-box .bill-player-list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.8rem 0;
+}
+
+.bill-player-box .bill-price-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 4.5rem;
+}
+
+.bill-price-box .bill-price-text {
+    color: white;
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+.bill-price-box .bill-prics-num {
+    color: white;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.bill-player-wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.bill-player-wraper .bill-player-box {
+    margin-top: 26px;
+    margin-left: 50px;
+    width: 38rem;
+    height: 30rem;
+    background: #262647;
+    padding: 2rem;
+}
+
+.bill-player-wraper .btn-box {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 38rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background: none;
+}
+
+.bill-player-wraper .btn-box .button {
+    width: 216px !important;
+    justify-content: center;
+}
+
+.bill-player-box .bill-list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+
+.bill-player-box .bill-list-box .text {
+    color: white;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+
+/* 未支付 */
+
+.bill-list-box .no-player {
+    color: red !important;
+}
+
+.bill-list-box .key-store-text {
+    color: white;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-left: 1rem;
+    /* 自动换行 */
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}

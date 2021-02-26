@@ -1,0 +1,58 @@
+.home-container .sys_content_box {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sys_item {
+    height: 20rem;
+    width: 20rem;
+    /* flex: auto; */
+    flex: content;
+    cursor: pointer;
+}
+
+.item_background {
+    background: url("../img/border_round_line.png") no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+.sys_item:hover .item_background {
+    animation: rotate 3s infinite linear;
+}
+
+.sys_item:hover .sys_list_title {
+    animation: float 3s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    from {
+        transform: rotate(0deg) translate(0.5rem, 0.5rem) rotate(0deg);
+        /* transform: translateX(0rem); */
+    }
+    to {
+        transform: rotate(360deg) translate(0.5rem, 0.5rem) rotate(-360deg);
+        /* transform: translateX(1rem); */
+    }
+}
+
+.sys_list_title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 8rem;
+    text-align: center;
+    margin-top: 45%;
+}

@@ -1,0 +1,13 @@
+node_modules
+debug
+server/node_modules
+server/debug
+.vscode
+.DS_Store
+angularjsclient/app/lib/angular-mocks/package.json
+angularjsclient/app/lib/angular-animate/package.json
+angularjsclient/app/lib/angular-resource/package.json
+angularjsclient/app/lib/angular-route/package.json
+angularjsclient/app/lib/angular/package.json
+client/package-lock.json
+test/*.sh
