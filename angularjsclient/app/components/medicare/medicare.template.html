@@ -11,24 +11,12 @@
                     <div class="col col-l mycol-l">
                         <div class="xpanel-wrapper xpanel-wrapper-60">
                             <div class="xpanel xpanel-l-t">
-                                <div class="title">缴费信息上链端</div>
-                                <div class="spacer5"></div>
-                                <div ng-repeat="payment in paymentevents">
-                                    <div class="eventmsg">
-                                        <div class="eventbox">
-                                            <div class="eventmsgid eventmsgblue status_bar">
-                                                编号：
-                                            </div>
-                                            <div class="eventmsgtitle">
-                                            </div>
-                                            <div class="eventmsgcontent">
-                                                <span></span>
-                                                <span class="eventmsgstatus">
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="title">业务流程信息</div>
+                                <div class="subtitle">业务流程名称：{{businessInfo.business_flow_name}}</div>
+                                <div class="subtitle">所属应用：{{businessInfo.app_name}}</div>
+                                <div class="subtitle">创建者：{{businessInfo.createdby_user}}</div>
+                                <div class="subtitle">创建时间：{{businessInfo.createdAt| date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                                <div class="subtitle">更新时间：{{businessInfo.updatedAt| date:'yyyy-MM-dd HH:mm:ss'}}</div>
                             </div>
                         </div>
                         <div class="xpanel-wrapper xpanel-wrapper-40">

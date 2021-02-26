@@ -8,24 +8,35 @@ module('medicare', ['api.Service', 'plugin.Service']).
 component('medicare', {
     templateUrl: 'components/medicare/medicare.template.html',
     controller: ['$scope', '$location', '$timeout', 'apiService',
-        function MedicareController($scope, $location, $timeout) {
-            $scope.blockList = [];
+        function MedicareController($scope, $location, $timeout, apiService) {
+            $scope.businessInfo = {
+                app_name: "",
+                business_flow_name: "",
+                createdAt: "",
+                updatedAt: "",
+                createdby_user: ""
+            };
+            let http_url = localStorage.getItem("http_url");
+            apiService.set_header_token(localStorage.getItem("token"))
+            var getBusinessData = function() {
+                apiService.get_business_flow_data(http_url).then(data => {
+                    let result = data.data.data;
+                    $scope.businessInfo.app_name = result.app_info.app_name;
+                    $scope.businessInfo.business_flow_name = result.business_flow_name;
+                    $scope.businessInfo.createdAt = result.createdAt;
+                    $scope.businessInfo.updatedAt = result.updatedAt;
+                    $scope.businessInfo.createdby_user = result.createdby_user.username
 
-            // var getBlockList = function() {
-            //     apiService..then(data => {
-            //         $scope.blockList = data.data.data.blockList
-            //         console.log("===>BlOCK LIST", $scope.blockList)
-            //         setTimeout(() => {
-            //             getBlockList()
-            //         }, 10000);
-            //     }).catch(err => {
-            //         console.log("===>BlOCK LIST", err)
-            //         setTimeout(() => {
-            //             getBlockList()
-            //         }, 10000);
-            //     })
-            // }
-            // getBlockList()
+                    setTimeout(() => {
+                        getBusinessData()
+                    }, 10000);
+                }).catch(err => {
+                    setTimeout(() => {
+                        getBusinessData()
+                    }, 10000);
+                })
+            }
+            getBusinessData()
 
             var map = L.map('cityChart');
             var baseLayers = {

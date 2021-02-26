@@ -6,6 +6,9 @@ config(['$routeProvider',
         function config($routeProvider) {
             $routeProvider.
             when('/', {
+                template: '<login></login>'
+            }).
+            when('/business_monitor', {
                 template: '<medicare></medicare>'
             });
 

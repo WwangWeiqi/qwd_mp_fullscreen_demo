@@ -12,13 +12,12 @@ angular.module("api.Service", ["plugin.Service"])
                 withCredentials: true,
                 headers: { 'jwttoken_third_part': jwttoken_third_part }
             }).catch(err => {
-                $("#loader").hide()
-                if (!fork) {
-                    if (err.status == -1) {
-                        pluginService.toaster("error", `服务器连接失败，请检查网络状态`)
-                    } else {
-                        pluginService.toaster("error", `未知错误,请稍后重试${JSON.stringify(err)}`)
-                    }
+                if (err.status == -1) {
+                    pluginService.toaster("error", JSON.stringify(err))
+                } else if (err.status == 404) {
+                    pluginService.toaster("error", "请检查URI")
+                } else {
+                    pluginService.toaster("error", `未知错误,请稍后重试${JSON.stringify(err)}`)
                 }
             })
         }

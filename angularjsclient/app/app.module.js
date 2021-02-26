@@ -7,4 +7,5 @@ angular.module('cityParkingApp', [
     'api.Service',
     'plugin.Service',
     'medicare',
+    'login'
 ]);
