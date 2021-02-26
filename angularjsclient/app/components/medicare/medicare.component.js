@@ -39,10 +39,10 @@ component('medicare', {
                         let unit_type = "";
 
                         switch (result.tx_info_list[i].txhash_list[j].unit_type) {
-                            case "1":
+                            case 1:
                                 unit_type = "加密数据上链"
                                 break;
-                            case "3":
+                            case 3:
                                 unit_type = "存证上链"
                                 break;
                             default:

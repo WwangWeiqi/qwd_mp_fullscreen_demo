@@ -341,6 +341,7 @@
     overflow: hidden;
 }
 
+
 .medicare .xpanel-l-b {
     background-image: url("../img/panel-l-b.png");
     overflow: hidden;
@@ -739,6 +740,75 @@
     color: white;
 }
 
+/*  --------   --------- */
+.eventmsg {
+    height: auto;
+}
+.eventmsg .box {
+    margin: 10px;
+}
+
+.eventmsg .box .txhash-wapper {
+    padding-top: 6px;
+    background-color: #52c41a;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    border-radius: 3px;
+}
+
+.eventmsg .box .txhash-wapper .blockchain-symbol {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 14px;
+    font-weight: 600;
+}
+.eventmsg .box .txhash-wapper .txhash {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.eventmsg .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.eventmsg .content .from-user {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(136, 131, 131, .6);
+    border-radius: 3px;
+}
+
+.eventmsg .content .unit-type {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(250, 84, 28, .8);
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.eventmsg .content .to-user {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(136, 131, 131, .6);
+    border-radius: 3px;
+}
+
 .medicare .eventmsgts {
     font-size: 12px;
 }
@@ -752,6 +822,7 @@
     margin-right: 6px;
     margin-bottom: 3px;
 }
+
 
 .medicare .eventmsgtitle {
     font-size: 14px;
@@ -810,10 +881,19 @@
 
 .medicare .subtitle {
     color: white;
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+/* .medicare .item {
+    color: white;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 6px;
-}
+} */
 
 .medicare .linemsg {
     color: white;

@@ -47,30 +47,30 @@ ajv@^6.12.3:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-angular-animate@1.8.x:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.8.0.tgz#fc6333a5a052129dc5fa0b02cd676304d2b99e9d"
-  integrity sha512-ROFK3UIn1MSVpqAlay15ZxjPmVbvwaO3Zn/2vhmQdYeqxSbUVuOckcvtDLBpHPGPtOAreu35qfV7NQ7u2EgDcA==
+angular-animate@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npm.taobao.org/angular-animate/download/angular-animate-1.8.2.tgz#a3045e523ffb8d7fcbebd3cb68d1fdd474665ced"
+  integrity sha1-owReUj/7jX/L69PLaNH91HRmXO0=
 
-angular-mocks@1.8.x:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.8.0.tgz#9d161fe2102e47e46ff78a4226e4dfec27c060c4"
-  integrity sha512-oFKJIqR6zcsW6V9UQMuUYCXIcTy+n7oYExXxZkvU57hwJQdU1nuNZcSMQA9URiEAPyo7v3bqm0eOP3Ezi7Bigg==
+angular-mocks@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npm.taobao.org/angular-mocks/download/angular-mocks-1.8.2.tgz#dc022420b86978cf317a8447c116c0be73a853bf"
+  integrity sha1-3AIkILhpeM8xeoRHwRbAvnOoU78=
 
-angular-resource@1.8.x:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/angular-resource/-/angular-resource-1.8.0.tgz#578ef122e7cb7bcc6c0ad6c2451dc3d27fd570ba"
-  integrity sha512-9woUq3kDwoT7R6SjKX8vaJMhOplYBm9sqRAxKgDhDIdPyA8iBowqQIusf9+8Q+z/HlXb8ZXvKspJyKXrxmKdvg==
+angular-resource@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npm.taobao.org/angular-resource/download/angular-resource-1.8.2.tgz#fc1f1adb93dfb83e295d1cfff2a48cec4296e20a"
+  integrity sha1-/B8a25PfuD4pXRz/8qSM7EKW4go=
 
-angular-route@1.8.x:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.8.0.tgz#cb8066c5d34284ffd6a15ac7be1b3d51c5ad7bb2"
-  integrity sha512-ORvXAdVfCCA6XFwyjSkVQFFGufj0mNGiCvBR93Qsii8+7t/6Ioy6wheUoCj1x4NWUv7hAq3nYYGCVO6QEKb1BQ==
+angular-route@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npm.taobao.org/angular-route/download/angular-route-1.8.2.tgz#d482bf05a8c9e448300acd8f9989c635d31b5077"
+  integrity sha1-1IK/BajJ5EgwCs2PmYnGNdMbUHc=
 
-angular@1.8.x:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.8.0.tgz#b1ec179887869215cab6dfd0df2e42caa65b1b51"
-  integrity sha512-VdaMx+Qk0Skla7B5gw77a8hzlcOakwF8mjlW13DpIWIDlfqwAbSSLfd8N/qZnzEmQF4jC4iofInd3gE7vL8ZZg==
+angular@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.npm.taobao.org/angular/download/angular-1.8.2.tgz#5983bbb5a9fa63e213cb7749199e0d352de3a2f1"
+  integrity sha1-WYO7tan6Y+ITy3dJGZ4NNS3jovE=
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -1581,10 +1581,10 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-jasmine-core@^3.5.0:
+jasmine-core@^3.6.0:
   version "3.6.0"
-  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.6.0.tgz#491f3bb23941799c353ceb7a45b38a950ebc5a20"
-  integrity sha512-8uQYa7zJN8hq9z+g8z1bqCfdC8eoDAeVnM5sfqs7KHv9/ifoJ500m018fpFc7RDaO6SWCLCXwo/wPSNcdYTgcw==
+  resolved "https://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.6.0.tgz?cache=0&sync_timestamp=1595999369941&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjasmine-core%2Fdownload%2Fjasmine-core-3.6.0.tgz#491f3bb23941799c353ceb7a45b38a950ebc5a20"
+  integrity sha1-SR87sjlBeZw1POt6RbOKlQ68WiA=
 
 jasmine-core@~2.8.0:
   version "2.8.0"

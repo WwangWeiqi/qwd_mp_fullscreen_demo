@@ -57,16 +57,35 @@
                                 <div style="height: 80%;overflow: auto;">
                                     <div ng-repeat="txInfo in txInfo_list">
                                         <div class="eventmsg">
-                                            <div class="eventbox">
+
+                                            <div class="box">
+                                                <div class="txhash-wapper">
+                                                    <span class="blockchain-symbol">{{txInfo.blockchain_symbol}}:</span>
+                                                    <span class="txhash">{{txInfo.txhash}}</span>
+                                                </div>
+                                                <div class="content">
+                                                    <span class="from-user">{{txInfo.from_user}}</span>
+                                                    <span>发送</span>
+                                                    <span class="unit-type">{{txInfo.unit_type}}</span>
+                                                    <span>到</span>
+                                                    <span class="to-user">{{txInfo.to_user}}</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="eventbox">
                                                 <div class="eventmsgid eventmsgblue">
-                                                    {{txInfo.blockchain_symbol}}:{{txInfo.txhash}}
+                                                    <span class="title">{{txInfo.blockchain_symbol}}</span>
+                                                    :{{txInfo.txhash}}
                                                 </div>
                                                 <div class="eventmsgcontent">
+                                                    <div>
+                                                        
+                                                    </div>
                                                     <span>{{txInfo.unit_type}}</span>
                                                     <span>{{txInfo.from_user}}</span>
                                                     <span>{{txInfo.to_user}}</span>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
