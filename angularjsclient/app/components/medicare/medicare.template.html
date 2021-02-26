@@ -11,7 +11,7 @@
                     <div class="col col-l mycol-l">
                         <div class="xpanel-wrapper xpanel-wrapper-60">
                             <div class="xpanel xpanel-l-t">
-                                <div class="title">业务流程信息</div>
+                                <div class="title">业务流程概览</div>
                                 <div class="subtitle">业务流程名称：{{businessInfo.business_flow_name}}</div>
                                 <div class="subtitle">所属应用：{{businessInfo.app_name}}</div>
                                 <div class="subtitle">创建者：{{businessInfo.createdby_user}}</div>
@@ -54,15 +54,18 @@
                             <div class="xpanel xpanel-c-b">
                                 <div class="title title-long">启文达区块链中台</div>
                                 <!-- <div class="fill-h" id="timeDistChart"></div> -->
-                                <div ng-repeat="midevent in midplatformevents">
-                                    <div class="eventmsg">
-
-                                        <div class="eventbox">
-                                            <div class="eventmsgid eventmsgblue">
-
-                                            </div>
-                                            <div class="eventmsgcontent">
-
+                                <div style="height: 80%;overflow: auto;">
+                                    <div ng-repeat="txInfo in txInfo_list">
+                                        <div class="eventmsg">
+                                            <div class="eventbox">
+                                                <div class="eventmsgid eventmsgblue">
+                                                    {{txInfo.blockchain_symbol}}:{{txInfo.txhash}}
+                                                </div>
+                                                <div class="eventmsgcontent">
+                                                    <span>{{txInfo.unit_type}}</span>
+                                                    <span>{{txInfo.from_user}}</span>
+                                                    <span>{{txInfo.to_user}}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

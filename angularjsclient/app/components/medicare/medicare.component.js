@@ -1,5 +1,6 @@
 'use strict';
 var clickState = null;
+
 //TODO: 右端：医保端加上 查看详情
 
 // Register `medicare` component, along with its associated controller and template
@@ -16,16 +17,58 @@ component('medicare', {
                 updatedAt: "",
                 createdby_user: ""
             };
+
+
+            $scope.txInfo_list = [];
+
             let http_url = localStorage.getItem("http_url");
             apiService.set_header_token(localStorage.getItem("token"))
+
+            var refresh_BusinessInfo = function(result) {
+                $scope.businessInfo.app_name = result.app_info.app_name;
+                $scope.businessInfo.business_flow_name = result.business_flow_name;
+                $scope.businessInfo.createdAt = result.createdAt;
+                $scope.businessInfo.updatedAt = result.updatedAt;
+                $scope.businessInfo.createdby_user = result.createdby_user.username
+            }
+
+            var refresh_TXInfo = function(result) {
+                let ret_list = [];
+                for (let i = 0; i < result.tx_info_list.length; i++) {
+                    for (let j = 0; j < result.tx_info_list[i].txhash_list.length; j++) {
+                        let unit_type = "";
+
+                        switch (result.tx_info_list[i].txhash_list[j].unit_type) {
+                            case "1":
+                                unit_type = "加密数据上链"
+                                break;
+                            case "3":
+                                unit_type = "存证上链"
+                                break;
+                            default:
+                                unit_type = result.tx_info_list[i].txhash_list[j].unit_type
+                        }
+                        let txInfo = {
+                            blockchain_symbol: result.tx_info_list[i].blockchaininfo.blockchain_symbol,
+                            from_user: result.tx_info_list[i].from_user.username,
+                            to_user: result.tx_info_list[i].to_user.username,
+                            txhash: result.tx_info_list[i].txhash_list[j].txhash,
+                            unit_type: unit_type
+                        }
+                        ret_list.push(txInfo)
+                    }
+
+                }
+                return ret_list;
+            }
+
             var getBusinessData = function() {
                 apiService.get_business_flow_data(http_url).then(data => {
                     let result = data.data.data;
-                    $scope.businessInfo.app_name = result.app_info.app_name;
-                    $scope.businessInfo.business_flow_name = result.business_flow_name;
-                    $scope.businessInfo.createdAt = result.createdAt;
-                    $scope.businessInfo.updatedAt = result.updatedAt;
-                    $scope.businessInfo.createdby_user = result.createdby_user.username
+                    console.log(result)
+                    refresh_BusinessInfo(result)
+                    $scope.txInfo_list = refresh_TXInfo(result)
+                    console.log("txinfo", $scope.txInfo_list)
 
                     setTimeout(() => {
                         getBusinessData()
