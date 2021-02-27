@@ -93,7 +93,7 @@
 
 .medicare .col {
     margin: 0 10px;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .medicare .col-l {
@@ -190,15 +190,28 @@
 }
 
 .medicare .xpanel-wrapper-35 {
-    height: 35%;
+    height: 34%;
+    /* width: 1200px; */
+    /* position: relative;
+    left: -49.3%; */
+    position: absolute;
+    left: 1.5%;
+    width: 48.5%;
 }
 
 .medicare .xpanel-wrapper-40 {
-    height: 40%;
+    /* height: 35%;
+    position: relative;
+    left: -108%;
+    width: 208%; */
+    position: absolute;
+    width: 47%;
+    left: 51.5%;
+    height: 34%;
 }
 
 .medicare .xpanel-wrapper-45 {
-    height: 45%;
+    height: 40%;
 }
 
 .medicare .xpanel-wrapper-50 {
@@ -210,11 +223,11 @@
 }
 
 .medicare .xpanel-wrapper-60 {
-    height: 60%;
+    height: 65%;
 }
 
-.medicare .xpanel-wrapper-57 {
-    height: 57%;
+.medicare .xpanel-wrapper-62 {
+    height: 62%;
 }
 
 .medicare .xpanel-wrapper-65 {
