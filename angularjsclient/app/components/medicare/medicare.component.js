@@ -20,9 +20,12 @@ component('medicare', {
 
 
             $scope.txInfo_list = [];
+            $scope.user_profile = JSON.parse(localStorage.getItem("user_profile"))
 
-            let http_url = localStorage.getItem("http_url");
-            apiService.set_header_token(localStorage.getItem("token"))
+            let uchain_url = localStorage.getItem("uchain_url");
+            let dchain_url = localStorage.getItem("dchain_url");
+            let token = localStorage.getItem("token");
+
 
             var refresh_BusinessInfo = function(result) {
                 $scope.businessInfo.app_name = result.app_info.app_name;
@@ -36,14 +39,14 @@ component('medicare', {
                 let ret_list = [];
                 for (let i = 0; i < result.tx_info_list.length; i++) {
                     for (let j = 0; j < result.tx_info_list[i].txhash_list.length; j++) {
-                        let unit_type = "";
+                        let unit_type = 0;
 
                         switch (result.tx_info_list[i].txhash_list[j].unit_type) {
                             case 1:
-                                unit_type = "加密数据上链"
+                                unit_type = "加密数据"
                                 break;
                             case 3:
-                                unit_type = "存证上链"
+                                unit_type = "存证数据"
                                 break;
                             default:
                                 unit_type = result.tx_info_list[i].txhash_list[j].unit_type
@@ -62,24 +65,37 @@ component('medicare', {
                 return ret_list;
             }
 
-            var getBusinessData = function() {
-                apiService.get_business_flow_data(http_url).then(data => {
+            var getBusinessUchainData = function() {
+                apiService.get_business_flow_uchain_data(uchain_url, token).then(data => {
                     let result = data.data.data;
                     console.log(result)
                     refresh_BusinessInfo(result)
-                    $scope.txInfo_list = refresh_TXInfo(result)
+                    $scope.txInfo_list = refresh_TXInfo(result).reverse()
                     console.log("txinfo", $scope.txInfo_list)
 
                     setTimeout(() => {
-                        getBusinessData()
+                        getBusinessUchainData()
                     }, 10000);
                 }).catch(err => {
                     setTimeout(() => {
-                        getBusinessData()
+                        getBusinessUchainData()
                     }, 10000);
                 })
             }
-            getBusinessData()
+            getBusinessUchainData()
+
+            // var getBusinessDchainData = function() {
+            //     apiService.get_business_flow_dchain_data(dchain_url).then(data => {
+            //         console.log(data)
+            //         setTimeout(() => {
+            //             getBusinessDchainData()
+            //         }, 10000);
+            //     }).catch(err => {
+            //         setTimeout(() => {
+            //             getBusinessDchainData()
+            //         }, 10000);
+            //     })
+            // }
 
             var map = L.map('cityChart');
             var baseLayers = {

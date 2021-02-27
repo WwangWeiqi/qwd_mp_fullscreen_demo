@@ -2,15 +2,14 @@
 
 angular.module("api.Service", ["plugin.Service"])
     .factory('apiService', function($http, pluginService) {
-        var jwttoken_third_part = "";
-        var http_request = function(method, http_url, body) {
+        var http_request = function(method, http_url, token, body) {
             var data = method == "GET" ? "params" : "data";
             return $http({
                 method: method,
                 url: http_url,
                 [data]: body,
                 withCredentials: true,
-                headers: { 'jwttoken_third_part': jwttoken_third_part }
+                headers: { 'jwttoken_third_part': token }
             }).catch(err => {
                 if (err.status == -1) {
                     pluginService.toaster("error", JSON.stringify(err))
@@ -23,15 +22,26 @@ angular.module("api.Service", ["plugin.Service"])
         }
 
         return {
-            set_header_token: function(token) {
-                jwttoken_third_part = token
-            },
             /**
-             * 获取业务流程产生的数据
+             * 获取用户信息
              * @returns 
              */
-            get_business_flow_data: function(http_url) {
-                return http_request("GET", http_url);
+            login: function(token) {
+                return http_request("POST", "http://127.0.0.1:5052/api/v0.1.0/auth/data/account/login", token);
+            },
+            /**
+             * 获取业务流程产生的上链数据
+             * @returns 
+             */
+            get_business_flow_uchain_data: function(http_url, token) {
+                return http_request("GET", http_url, token);
+            },
+            /**
+             * 获取业务流程对用户产生的下链数据
+             * @returns 
+             */
+            get_business_flow_dchain_data: function(http_url, token) {
+                return http_request("POST", http_url, token);
             }
         }
     });

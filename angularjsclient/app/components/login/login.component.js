@@ -9,22 +9,24 @@ angular.module('login', ['api.Service', 'plugin.Service'])
 
                 $scope.login = function() {
 
-                    let http_url = $("input[name='http_url']").val();
+                    let uchain_url = $("input[name='uchain_url']").val();
+                    let dchain_url = $("input[name='dchain_url']").val();
                     let token = $("input[name='token']").val();
-                    localStorage.setItem("http_url", http_url)
+                    localStorage.setItem("uchain_url", uchain_url)
+                    localStorage.setItem("dchain_url", dchain_url)
                     localStorage.setItem("token", token)
-                    apiService.set_header_token(token)
 
-                    apiService.get_business_flow_data(http_url)
-                        .then(data => {
-                            // $("#loader").hide()
+                    Promise.all([apiService.login(token),
+                        apiService.get_business_flow_uchain_data(uchain_url, token),
+                        apiService.get_business_flow_dchain_data(dchain_url, token)
+                    ]).then(data => {
+                        if (data[0].data.statusCode == 200 && data[1].data.statusCode == 200 && data[2].data.statusCode == 200) {
                             console.log(data)
-                            if (data.data.statusCode == 200) {
-                                $location.path('/business_monitor');
-                            } else {
-                                pluginService.toaster("error", data.data.message)
-                            }
-                        })
+                            $location.path('/business_monitor');
+                        } else {
+                            pluginService.toaster("error", err.message)
+                        }
+                    })
                 }
             }
         ]

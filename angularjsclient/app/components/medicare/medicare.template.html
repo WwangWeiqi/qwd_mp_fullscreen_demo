@@ -9,9 +9,10 @@
             <div class="wrapper">
                 <div class="content">
                     <div class="col col-l mycol-l">
-                        <div class="xpanel-wrapper xpanel-wrapper-60">
+                        <div class="xpanel-wrapper xpanel-wrapper-50">
                             <div class="xpanel xpanel-l-t">
                                 <div class="title">业务流程概览</div>
+                                <div class="subtitle">当前用户：{{user_profile.username}}</div>
                                 <div class="subtitle">业务流程名称：{{businessInfo.business_flow_name}}</div>
                                 <div class="subtitle">所属应用：{{businessInfo.app_name}}</div>
                                 <div class="subtitle">创建者：{{businessInfo.createdby_user}}</div>
@@ -19,40 +20,19 @@
                                 <div class="subtitle">更新时间：{{businessInfo.updatedAt| date:'yyyy-MM-dd HH:mm:ss'}}</div>
                             </div>
                         </div>
-                        <div class="xpanel-wrapper xpanel-wrapper-40">
-                            <div class="xpanel xpanel-l-b">
-                                <div class="title">区块链记录</div>
-                                <div style="overflow-y: scroll;height: 80%;">
-                                    <div ng-repeat="block in blockList" style="color: white;">
-                                        <div class="eventbox" ng-class="{'darkblue': block.number % 2 == 0}">
-                                            <div class="eventmsgid eventmsggreen2">
-                                                载体区块上链时间:{{1000| date:'yyyy-MM-dd HH:mm:ss' }}
-                                            </div>
-                                            <div class="eventmsgtitle">
-                                                存证信息散列编号:
-                                            </div>
-                                            <div class="eventmsgcontent">
-                                                <div style="color:white;font-size: 0.8rem;text-overflow:ellipsis;overflow-x:hidden;;white-space:nowrap" ng-repeat="tx in block.transactions">
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col col-c mycol-c">
                         <div class="xpanel-wrapper xpanel-wrapper-3">
                         </div>
-                        <div class="xpanel-wrapper xpanel-wrapper-62">
+                        <div class="xpanel-wrapper xpanel-wrapper-50">
                             <div class="xpanel no-bg">
                                 <div class="fill-h map" id="cityChart"></div>
                             </div>
                         </div>
-                        <div class="xpanel-wrapper xpanel-wrapper-35">
+                        <div class="xpanel-wrapper xpanel-wrapper-45">
                             <div class="xpanel xpanel-c-b">
-                                <div class="title title-long">启文达区块链中台</div>
+                                <div class="title title-long">业务数据上链监控</div>
                                 <!-- <div class="fill-h" id="timeDistChart"></div> -->
                                 <div style="height: 80%;overflow: auto;">
                                     <div ng-repeat="txInfo in txInfo_list">
@@ -93,24 +73,25 @@
                         </div>
                     </div>
                     <div class="col col-r mycol-r">
-                        <div class="xpanel-wrapper xpanel-wrapper-60">
-                            <div class="xpanel xpanel-r-t">
-                                <div class="title">医保信息接收端</div>
-                                <div class="subtitle">当前医保系统：{{ currentagency }}</div>
-                                <div ng-repeat="covered in coveredevents">
-                                    <div class="eventmsg">
-                                        <div class="eventbox">
-                                            <div class="eventmsgid" ng-class="{'eventmsggreen3' : covered.real_time==3, 'eventmsggreen2' : covered.real_time==2, 'eventmsggreen1' : covered.real_time==1, 'eventmsgblue' : covered.real_time==0, 'newmsg': covered.new_item}">
+                        <div class="xpanel-wrapper xpanel-wrapper-50">
+                            <div class="xpanel xpanel-l-b">
+                                <div class="title">区块链记录</div>
+                                <div style="overflow-y: scroll;height: 80%;">
+                                    <!-- <div ng-repeat="block in blockList" style="color: white;"> -->
+                                    <div class="eventbox" ng-class="{'darkblue': block.number % 2 == 0}">
+                                        <div class="eventmsgid eventmsggreen2">
+                                            区块高度:
+                                        </div>
+                                        <div class="eventmsgtitle">
+                                            交易信息散列编号:
+                                        </div>
+                                        <div class="eventmsgcontent">
+                                            <div style="color:white;font-size: 0.8rem;text-overflow:ellipsis;overflow-x:hidden;;white-space:nowrap" ng-repeat="tx in block.transactions">
 
-                                            </div>
-                                            <div class="eventmsgtitle2">
-                                                <span></span>
-                                                <span class="eventmsgstatus">
-                                             
-                                                </span>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>

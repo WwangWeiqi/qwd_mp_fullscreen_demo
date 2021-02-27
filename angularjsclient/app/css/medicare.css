@@ -198,7 +198,7 @@
 }
 
 .medicare .xpanel-wrapper-45 {
-    height: 40%;
+    height: 45%;
 }
 
 .medicare .xpanel-wrapper-50 {
@@ -213,8 +213,8 @@
     height: 60%;
 }
 
-.medicare .xpanel-wrapper-62 {
-    height: 62%;
+.medicare .xpanel-wrapper-57 {
+    height: 57%;
 }
 
 .medicare .xpanel-wrapper-65 {
@@ -340,7 +340,6 @@
     background-image: url("../img/panel-l-t.png");
     overflow: hidden;
 }
-
 
 .medicare .xpanel-l-b {
     background-image: url("../img/panel-l-b.png");
@@ -740,20 +739,23 @@
     color: white;
 }
 
+
 /*  --------   --------- */
+
 .eventmsg {
     height: auto;
 }
+
 .eventmsg .box {
     margin: 10px;
 }
 
 .eventmsg .box .txhash-wapper {
     padding-top: 6px;
-    background-color: #52c41a;
+    background-color: #00aa50;
     padding-bottom: 4px;
     padding-left: 4px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
 }
 
 .eventmsg .box .txhash-wapper .blockchain-symbol {
@@ -762,6 +764,7 @@
     margin-right: 14px;
     font-weight: 600;
 }
+
 .eventmsg .box .txhash-wapper .txhash {
     display: inline-block;
     font-size: 12px;
@@ -778,13 +781,15 @@
 }
 
 .eventmsg .content .from-user {
-    width: 80px;
+    width: auto;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(136, 131, 131, .6);
     border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .eventmsg .content .unit-type {
@@ -793,20 +798,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(250, 84, 28, .8);
+    background-color: rgba(250, 84, 28, .9);
     border-radius: 3px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .eventmsg .content .to-user {
-    width: 80px;
+    width: auto;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(136, 131, 131, .6);
     border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .medicare .eventmsgts {
@@ -821,11 +828,11 @@
     margin-top: 0;
     margin-right: 6px;
     margin-bottom: 3px;
+    color: white;
 }
 
-
 .medicare .eventmsgtitle {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 2px;
     margin-left: 3px;
 }
@@ -852,10 +859,10 @@
 }
 
 .medicare .eventmsgid {
-    font-size: 10px;
+    font-size: 12px;
     font-family: Courier;
     margin: 0;
-    padding-left: 3px;
+    padding: 3px;
     line-height: 13px;
 }
 
@@ -887,6 +894,7 @@
     padding-left: 20px;
     font-size: 16px;
 }
+
 
 /* .medicare .item {
     color: white;
