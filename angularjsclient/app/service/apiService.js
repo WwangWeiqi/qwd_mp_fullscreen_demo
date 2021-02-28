@@ -53,7 +53,7 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moheng某一区间内的多个区块信息
              */
             get_moheng_blocklist: function(query) {
-                return http_request("GET", "http://localhost:3013/mp/getblockNumber", "", query);
+                return http_request("GET", "http://localhost:3013/mp/getBlockList", "", query);
             },
         }
     });

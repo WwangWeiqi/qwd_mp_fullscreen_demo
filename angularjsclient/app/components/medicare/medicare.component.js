@@ -20,6 +20,8 @@ component('medicare', {
 
 
             $scope.txInfo_list = [];
+            $scope.blockList = [];
+            $scope.dchainInfo_list = [];
             $scope.user_profile = JSON.parse(localStorage.getItem("user_profile"))
 
             let uchain_url = localStorage.getItem("uchain_url");
@@ -27,7 +29,7 @@ component('medicare', {
             let token = localStorage.getItem("token");
 
 
-            var refresh_BusinessInfo = function(result) {
+            var refresh_BusinessUchainData = function(result) {
                 $scope.businessInfo.app_name = result.app_info.app_name;
                 $scope.businessInfo.business_flow_name = result.business_flow_name;
                 $scope.businessInfo.createdAt = result.createdAt;
@@ -56,7 +58,9 @@ component('medicare', {
                             from_user: result.tx_info_list[i].from_user.username,
                             to_user: result.tx_info_list[i].to_user.username,
                             txhash: result.tx_info_list[i].txhash_list[j].txhash,
-                            unit_type: unit_type
+                            unit_type: unit_type,
+                            createdAt: result.tx_info_list[i].txhash_list[j].createdAt,
+                            unit_name: result.tx_info_list[i].txhash_list[j].unit_name
                         }
                         ret_list.push(txInfo)
                     }
@@ -68,9 +72,45 @@ component('medicare', {
             var getBusinessUchainData = function() {
                 apiService.get_business_flow_uchain_data(uchain_url, token).then(data => {
                     let result = data.data.data;
-                    refresh_BusinessInfo(result)
-                    $scope.txInfo_list = refresh_TXInfo(result).reverse()
+                    refresh_BusinessUchainData(result)
+                    $scope.txInfo_list = refresh_TXInfo(result)
+                }).catch(err => {
+                    console.log(err)
+                })
+            }
 
+            var refresh_UserDchainData = function(result) {
+                let ret_list = [];
+                for (let i = 0; i < result.length; i++) {
+
+                    for (let j = 0; j < result[i].txhash_list.length; j++) {
+                        // result[i].txhash_list[j].data = JSON.parse(result[i].txhash_list[j].data)
+                        result[i].txhash_list[j].from_user = result[i].from_user
+                        result[i].txhash_list[j].blockchain_symbol = result[i].blockinfo.blockchain_symbol
+                        switch (result[i].txhash_list[j].unit_type) {
+                            case 1:
+                                result[i].txhash_list[j].unit_type = "加密数据"
+                                break;
+                            case 3:
+                                result[i].txhash_list[j].unit_type = "存证数据"
+                                break;
+                            default:
+                                result[i].txhash_list[j].unit_type = result[i].txhash_list[j].unit_type
+                        }
+                        ret_list.push(result[i].txhash_list[j])
+                    }
+
+                }
+                return ret_list
+
+            }
+
+            var getBusinessDchainData = function() {
+                apiService.get_business_flow_dchain_data(dchain_url, token).then(data => {
+                    let result = data.data.data;
+
+                    $scope.dchainInfo_list = refresh_UserDchainData(result)
+                    console.log($scope.dchainInfo_list)
                 }).catch(err => {
                     console.log(err)
                 })
@@ -78,7 +118,15 @@ component('medicare', {
 
             var getMohengBlocklist = function() {
                 apiService.get_moheng_blocknumber().then(data => {
-                    console.log(data)
+
+                    let latest = data.data.data;
+                    apiService.get_moheng_blocklist({ start: latest - 10, end: latest }).then(result => {
+                        for (let i = 0; i < result.data.data.blockList.length; i++) {
+                            result.data.data.blockList[i].number = parseInt(result.data.data.blockList[i].number, 16)
+                            result.data.data.blockList[i].timestamp = parseInt(result.data.data.blockList[i].timestamp, 16) * 1000
+                        }
+                        $scope.blockList = result.data.data.blockList.reverse();
+                    })
 
                 }).catch(err => {
                     console.log(err)
@@ -86,9 +134,11 @@ component('medicare', {
             }
             getBusinessUchainData()
             getMohengBlocklist()
+            getBusinessDchainData()
             var refresh_interval = setInterval(() => {
                 getBusinessUchainData()
-                    // getMohengBlocklist()
+                getMohengBlocklist()
+                getBusinessDchainData()
             }, 10000);
             // refresh_interval
 

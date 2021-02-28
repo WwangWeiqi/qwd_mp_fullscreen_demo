@@ -374,6 +374,38 @@
     overflow: hidden;
 }
 
+.medicare .xpanel-r-m .dchaintable {
+    background: transparent;
+    padding: 0 5px 0 5px;
+    height: 90%;
+    cursor: pointer;
+}
+
+td>.blockchain {
+    padding: 3px 6px 3px 6px;
+    background: #00aa50;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+td>.unit-type {
+    padding: 3px 6px 3px 6px;
+    background: #003366;
+    border-radius: 3px;
+}
+
+td>.unit-name {
+    padding: 3px 6px 3px 6px;
+    background: rgba(250, 84, 28, .9);
+    border-radius: 3px;
+}
+
+td>.user {
+    padding: 3px 6px 3px 6px;
+    background: rgba(136, 131, 131, .6);
+    border-radius: 3px;
+}
+
 .medicare .xpanel-r-b {
     background-image: url("../img/panel-r-b.png");
     overflow: hidden;
@@ -381,6 +413,7 @@
 
 .medicare .xpanel .title {
     padding-left: 24px;
+    padding-right: 24px;
     height: 36px;
     line-height: 36px;
     font-size: 17px;
@@ -389,6 +422,18 @@
     background-image: url("../img/title-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.medicare .xpanel .uchaintable {
+    background: transparent;
+    padding: 0 5px 0 5px;
+    height: 90%;
+    cursor: pointer;
+}
+
+.medicare .xpanel .title .explorerlink {
+    float: right;
+    font-size: 12px;
 }
 
 .medicare .normalfont {
@@ -768,6 +813,7 @@
     background-color: #00aa50;
     padding-bottom: 4px;
     padding-left: 4px;
+    padding-right: 8px;
     /* border-radius: 3px; */
 }
 
@@ -784,13 +830,32 @@
     font-weight: 600;
 }
 
+.eventmsg .box .txhash-wapper .txcreated {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .eventmsg .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 4px;
-    width: 60%;
+    width: 90%;
     margin-left: 10px;
+}
+
+.eventmsg .content .unit-type {
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #003366;
+    border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .eventmsg .content .from-user {
@@ -805,7 +870,7 @@
     padding-right: 6px;
 }
 
-.eventmsg .content .unit-type {
+.eventmsg .content .unit-name {
     width: auto;
     height: 30px;
     display: flex;
@@ -845,7 +910,7 @@
 }
 
 .medicare .eventmsgtitle {
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 2px;
     margin-left: 3px;
 }
@@ -857,7 +922,7 @@
 }
 
 .medicare .eventmsgcontent {
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 2px;
     margin-left: 3px;
 }
@@ -877,6 +942,7 @@
     margin: 0;
     padding: 3px;
     line-height: 13px;
+    font-weight: bolder;
 }
 
 .medicare .eventmsgblue {
