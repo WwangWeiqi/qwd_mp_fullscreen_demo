@@ -42,6 +42,18 @@ angular.module("api.Service", ["plugin.Service"])
              */
             get_business_flow_dchain_data: function(http_url, token) {
                 return http_request("POST", http_url, token);
-            }
+            },
+            /**
+             * 获取moheng区块链高度
+             */
+            get_moheng_blocknumber: function() {
+                return http_request("GET", "http://localhost:3013/mp/getblockNumber");
+            },
+            /**
+             * 获取moheng某一区间内的多个区块信息
+             */
+            get_moheng_blocklist: function(query) {
+                return http_request("GET", "http://localhost:3013/mp/getblockNumber", "", query);
+            },
         }
     });

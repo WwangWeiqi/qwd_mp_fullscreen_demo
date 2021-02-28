@@ -68,21 +68,31 @@ component('medicare', {
             var getBusinessUchainData = function() {
                 apiService.get_business_flow_uchain_data(uchain_url, token).then(data => {
                     let result = data.data.data;
-                    console.log(result)
                     refresh_BusinessInfo(result)
                     $scope.txInfo_list = refresh_TXInfo(result).reverse()
-                    console.log("txinfo", $scope.txInfo_list)
 
-                    setTimeout(() => {
-                        getBusinessUchainData()
-                    }, 10000);
                 }).catch(err => {
-                    setTimeout(() => {
-                        getBusinessUchainData()
-                    }, 10000);
+                    console.log(err)
+                })
+            }
+
+            var getMohengBlocklist = function() {
+                apiService.get_moheng_blocknumber().then(data => {
+                    console.log(data)
+
+                }).catch(err => {
+                    console.log(err)
                 })
             }
             getBusinessUchainData()
+            getMohengBlocklist()
+            var refresh_interval = setInterval(() => {
+                getBusinessUchainData()
+                    // getMohengBlocklist()
+            }, 10000);
+            // refresh_interval
+
+            // getBusinessUchainData()
 
             // var getBusinessDchainData = function() {
             //     apiService.get_business_flow_dchain_data(dchain_url).then(data => {
@@ -165,8 +175,7 @@ component('medicare', {
 
             $scope.$on("$destroy", function() {
                 console.log('fullscreen destroy, clear interval')
-                clearInterval(retrieveInterval);
-                apiService.fork_request(false);
+                clearInterval(refresh_interval);
             });
 
             /********** 窗口大小改变时，重置报表大小 ********************/
