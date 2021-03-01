@@ -8,7 +8,7 @@ angular.module("api.Service", ["plugin.Service"])
                 method: method,
                 url: http_url,
                 [data]: body,
-                withCredentials: true,
+                // withCredentials: true, //允许本地接收server发来的cookie
                 headers: { 'jwttoken_third_part': token }
             }).catch(err => {
                 if (err.status == -1) {
@@ -27,7 +27,7 @@ angular.module("api.Service", ["plugin.Service"])
              * @returns 
              */
             login: function(token) {
-                return http_request("POST", "http://192.168.3.18:5052/api/v0.1.0/auth/data/account/login", token);
+                return http_request("POST", "http://127.0.0.1:5052/api/v0.1.0/auth/data/account/login", token);
             },
             /**
              * 获取业务流程产生的上链数据
@@ -47,13 +47,13 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moheng区块链高度
              */
             get_moheng_blocknumber: function() {
-              return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockNumber");
+                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockNumber");
             },
             /**
              * 获取moheng某一区间内的多个区块信息
              */
             get_moheng_blocklist: function(query) {
-                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getBlockList", "", query);
+                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockList", "", query);
             },
         }
     });
