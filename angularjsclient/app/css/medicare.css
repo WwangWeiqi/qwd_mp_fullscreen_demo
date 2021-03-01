@@ -189,25 +189,46 @@
     height: 33%;
 }
 
-.medicare .xpanel-wrapper-35 {
-    height: 34%;
-    /* width: 1200px; */
-    /* position: relative;
-    left: -49.3%; */
-    position: absolute;
-    left: 1.5%;
-    width: 48.5%;
+
+
+@media (min-width: 1600px) {
+    .medicare .xpanel-wrapper-35 {
+        height: 41%;
+        position: absolute;
+        left: 1.8%;
+        width: 48.5%;
+        margin-top: .73%;
+    }
 }
 
-.medicare .xpanel-wrapper-40 {
-    /* height: 35%;
-    position: relative;
-    left: -108%;
-    width: 208%; */
-    position: absolute;
-    width: 47%;
-    left: 51.5%;
-    height: 34%;
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .xpanel-wrapper-35 {
+        height: 41%;
+        position: absolute;
+        left: 1.6%;
+        width: 48.5%;
+        margin-top: .73%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .medicare .xpanel-wrapper-40 {
+        position: absolute;
+        width: 46%;
+        left: 51.5%;
+        height: 41%;
+        margin-top: .36%
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .xpanel-wrapper-40 {
+        position: absolute;
+        width: 47%;
+        left: 51.5%;
+        height: 41%;
+        margin-top: .36%
+    }
 }
 
 .medicare .xpanel-wrapper-45 {
@@ -223,11 +244,11 @@
 }
 
 .medicare .xpanel-wrapper-60 {
-    height: 65%;
+    height: 56%;
 }
 
 .medicare .xpanel-wrapper-62 {
-    height: 62%;
+    height: 52%;
 }
 
 .medicare .xpanel-wrapper-65 {
@@ -352,6 +373,17 @@
 .medicare .xpanel-l-t {
     background-image: url("../img/panel-l-t.png");
     overflow: hidden;
+}
+.medicare .xpanel-l-t .wapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    height: 90%;
+}
+
+
+.medicare .xpanel-l-t .wapper .box {
+   
 }
 
 .medicare .xpanel-l-b {
@@ -965,14 +997,28 @@ td>.user {
     background: #00dd50;
 }
 
-.medicare .subtitle {
-    color: white;
-    margin-top: 10px;
-    padding-top: 3px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    font-size: 16px;
+@media (min-width: 1600px) {
+    .medicare .subtitle {
+        color: white;
+        margin-top: 10px;
+        padding-top: 3px;
+        padding-bottom: 24px;
+        padding-left: 30px;
+        font-size: 16px;
+    }
 }
+
+@media (min-width: 960px) and (max-width: 1599px) {
+    .medicare .subtitle {
+        color: white;
+        margin-top: 10px;
+        padding-top: 3px;
+        padding-bottom: 14px;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+}
+
 
 
 /* .medicare .item {
