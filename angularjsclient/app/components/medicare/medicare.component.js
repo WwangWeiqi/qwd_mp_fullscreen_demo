@@ -110,7 +110,7 @@ component('medicare', {
                     let result = data.data.data;
 
                     $scope.dchainInfo_list = refresh_UserDchainData(result)
-                    console.log($scope.dchainInfo_list)
+                        // console.log($scope.dchainInfo_list)
                 }).catch(err => {
                     console.log(err)
                 })
@@ -140,22 +140,6 @@ component('medicare', {
                 getMohengBlocklist()
                 getBusinessDchainData()
             }, 10000);
-            // refresh_interval
-
-            // getBusinessUchainData()
-
-            // var getBusinessDchainData = function() {
-            //     apiService.get_business_flow_dchain_data(dchain_url).then(data => {
-            //         console.log(data)
-            //         setTimeout(() => {
-            //             getBusinessDchainData()
-            //         }, 10000);
-            //     }).catch(err => {
-            //         setTimeout(() => {
-            //             getBusinessDchainData()
-            //         }, 10000);
-            //     })
-            // }
 
             var map = L.map('cityChart');
             var baseLayers = {

@@ -20,11 +20,12 @@ angular.module('login', ['api.Service', 'plugin.Service'])
                         apiService.get_business_flow_uchain_data(uchain_url, token),
                         apiService.get_business_flow_dchain_data(dchain_url, token)
                     ]).then(data => {
+                        console.log(data)
                         if (data[0].data.statusCode == 200 && data[1].data.statusCode == 200 && data[2].data.statusCode == 200) {
-                            console.log(data)
+                            localStorage.setItem("user_profile", JSON.stringify(data[0].data.data))
                             $location.path('/business_monitor');
                         } else {
-                            pluginService.toaster("error", err.message)
+                            pluginService.toaster("error", "err")
                         }
                     })
                 }

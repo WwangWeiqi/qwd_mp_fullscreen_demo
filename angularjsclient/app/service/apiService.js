@@ -8,7 +8,7 @@ angular.module("api.Service", ["plugin.Service"])
                 method: method,
                 url: http_url,
                 [data]: body,
-                withCredentials: true,
+                // withCredentials: true, //允许本地接收server发来的cookie
                 headers: { 'jwttoken_third_part': token }
             }).catch(err => {
                 if (err.status == -1) {
