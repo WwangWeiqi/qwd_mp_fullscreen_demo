@@ -28,6 +28,7 @@ angular.module("api.Service", ["plugin.Service"])
              */
             login: function(token) {
                 return http_request("POST", "http://39.99.241.232:5052/api/v0.1.0/auth/data/account/login", token);
+                // return http_request("POST", "http://127.0.0.1:5052/api/v0.1.0/auth/data/account/login", token);
             },
             /**
              * 获取业务流程产生的上链数据
