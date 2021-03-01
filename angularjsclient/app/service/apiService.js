@@ -47,13 +47,13 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moheng区块链高度
              */
             get_moheng_blocknumber: function() {
-                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockNumber");
+                return http_request("GET", "http://47.92.94.8:8080/mp/getblockNumber");
             },
             /**
              * 获取moheng某一区间内的多个区块信息
              */
             get_moheng_blocklist: function(query) {
-                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockList", "", query);
+                return http_request("GET", "http://47.92.94.8:8080/mp/getBlockList", "", query);
             },
         }
     });
