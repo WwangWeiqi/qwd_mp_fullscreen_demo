@@ -27,7 +27,7 @@ angular.module("api.Service", ["plugin.Service"])
              * @returns 
              */
             login: function(token) {
-                return http_request("POST", "http://39.99.241.232/:5052/api/v0.1.0/auth/data/account/login", token);
+                return http_request("POST", "http://39.99.241.232:5052/api/v0.1.0/auth/data/account/login", token);
             },
             /**
              * 获取业务流程产生的上链数据
@@ -47,13 +47,13 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moheng区块链高度
              */
             get_moheng_blocknumber: function() {
-                return http_request("GET", "http://47.92.94.8:8080/mp/getblockNumber");
+                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getblockNumber");
             },
             /**
              * 获取moheng某一区间内的多个区块信息
              */
             get_moheng_blocklist: function(query) {
-                return http_request("GET", "http://47.92.94.8:8080/mp/getBlockList", "", query);
+                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getBlockList", "", query);
             },
         }
     });

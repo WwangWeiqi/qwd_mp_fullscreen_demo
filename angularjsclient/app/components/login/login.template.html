@@ -4,10 +4,26 @@
             <div class='login-title'>启文达多链融合大屏展示DEMO</div>
             <div class='login-input-box'>
                 <div class='input-box'>
-                    <input class='input' type='text' placeholder='请输获取业务流程上链数据接口' name="uchain_url" />
+                    <!-- <input class='input' type='text' placeholder='请输获取业务流程上链数据接口' name="uchain_url" /> -->
+                    <select class="select-box" ng-model="uchainValue" ng-change="uchainChange(uchainValue)">
+                        <option style="display:none" value="">
+                            <strong>请选择获取业务流程上链数据接口</strong>
+                        </option>
+                        <option value="http://39.99.241.232:5052/api/v0.1.0/auth/data/accessData/business_flow_tx_data" class="option">
+                            http://39.99.241.232:5052/api/v0.1.0/auth/data/accessData/business_flow_tx_data
+                        </option>
+                    </select>
                 </div>
                 <div class='input-box'>
-                    <input class='input' type='text' placeholder='输入获取用户下链数据接口' name="dchain_url" />
+                    <select class="select-box" ng-model="dchainValue" ng-change="dchainChange(dchainValue)">
+                        <option style="display:none" value="">
+                            <strong>请选择获取用户下链数据接口</strong>
+                        </option>
+                        <option value="http://39.99.241.232:5052/api/v0.1.0/auth/data/business_flow/execute_business_flow" class="option">
+                            http://39.99.241.232:5052/api/v0.1.0/auth/data/business_flow/execute_business_flow
+                        </option>
+                    </select>
+                    <!-- <input class='input' type='text' placeholder='输入获取用户下链数据接口' name="dchain_url" /> -->
                 </div>
                 <div class='input-box'>
                     <input class='input' type='text' placeholder='请输入业务流程TOKEN' name="token" />

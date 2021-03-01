@@ -1,5 +1,6 @@
 'use strict'
-
+var uchain_value
+var dchain_value
 
 angular.module('login', ['api.Service', 'plugin.Service'])
     .component('login', {
@@ -7,18 +8,26 @@ angular.module('login', ['api.Service', 'plugin.Service'])
         controller: ['$scope', '$location', 'apiService', 'pluginService',
             function LoginController($scope, $location, apiService, pluginService) {
 
+                $scope.uchainChange = function(value) {
+                    uchain_value = value
+                }
+
+                $scope.dchainChange = function(value) {
+                    dchain_value = value
+                }
+
                 $scope.login = function() {
 
-                    let uchain_url = $("input[name='uchain_url']").val();
-                    let dchain_url = $("input[name='dchain_url']").val();
+                    // let uchain_url = $("input[name='uchain_url']").val();
+                    // let dchain_url = $("input[name='dchain_url']").val();
                     let token = $("input[name='token']").val();
-                    localStorage.setItem("uchain_url", uchain_url)
-                    localStorage.setItem("dchain_url", dchain_url)
+                    localStorage.setItem("uchain_url", uchain_value)
+                    localStorage.setItem("dchain_url", dchain_value)
                     localStorage.setItem("token", token)
 
                     Promise.all([apiService.login(token),
-                        apiService.get_business_flow_uchain_data(uchain_url, token),
-                        apiService.get_business_flow_dchain_data(dchain_url, token)
+                        apiService.get_business_flow_uchain_data(uchain_value, token),
+                        apiService.get_business_flow_dchain_data(dchain_value, token)
                     ]).then(data => {
                         console.log(data)
                         if (data[0].data.statusCode == 200 && data[1].data.statusCode == 200 && data[2].data.statusCode == 200) {
