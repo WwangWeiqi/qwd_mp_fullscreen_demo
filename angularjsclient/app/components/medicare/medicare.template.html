@@ -2,7 +2,8 @@
     <div class="view-container medicare">
         <div class="container-fluid">
             <div class="header">
-                <h1 class="header-title" style="-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;">
+                <h1 class="header-title"
+                    style="-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;">
                     多链融合平台业务流程数据监控
                 </h1>
             </div>
@@ -18,8 +19,10 @@
                                         <div class="subtitle">业务流程名称：{{businessInfo.business_flow_name}}</div>
                                         <div class="subtitle">所属应用：{{businessInfo.app_name}}</div>
                                         <div class="subtitle">创建者：{{businessInfo.createdby_user}}</div>
-                                        <div class="subtitle">创建时间：{{businessInfo.createdAt| date:'yyyy-MM-dd HH:mm:ss'}}</div>
-                                        <div class="subtitle">更新时间：{{businessInfo.updatedAt| date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                                        <div class="subtitle">创建时间：{{businessInfo.createdAt| date:'yyyy-MM-dd
+                                            HH:mm:ss'}}</div>
+                                        <div class="subtitle">更新时间：{{businessInfo.updatedAt| date:'yyyy-MM-dd
+                                            HH:mm:ss'}}</div>
                                     </div>
                                 </div>
 
@@ -55,11 +58,15 @@
                                             <tr ng-repeat="txInfo in txInfo_list | orderBy:'createdAt':true">
                                                 <td><span class="blockchain">{{txInfo.blockchain_symbol}}</span></td>
                                                 <td><span class="unit-type">{{txInfo.unit_type}}</span></td>
-                                                <td><span class="unit-name"><i class="wpforms icon"></i>{{txInfo.unit_name}}</span></td>
-                                                <td><span class="user" title="{{txInfo.from_user}}">{{txInfo.from_user}}</span></td>
-                                                <td><span class="user" title="{{txInfo.to_user}}">{{txInfo.to_user}}</span></td>
+                                                <td><span class="unit-name"><i
+                                                            class="wpforms icon"></i>{{txInfo.unit_name}}</span></td>
+                                                <td><span class="user"
+                                                        title="{{txInfo.from_user}}">{{txInfo.from_user}}</span></td>
+                                                <td><span class="user"
+                                                        title="{{txInfo.to_user}}">{{txInfo.to_user}}</span></td>
                                                 <td title="{{txInfo.txhash}}"> {{txInfo.txhash}}</td>
-                                                <td title="{{txInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}">{{txInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}</td>
+                                                <td title="{{txInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}">
+                                                    {{txInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -70,18 +77,22 @@
                     <div class="col col-r mycol-r">
                         <div class="xpanel-wrapper xpanel-wrapper-60">
                             <div class="xpanel xpanel-l-b">
-                                <div class="title"><span>墨珩区块链监控</span><span class="explorerlink"><a target="blank" href="https://explorer.moheng.tech/">前往区块链浏览器</a></span></div>
+                                <div class="title"><span>墨珩区块链监控</span><span class="explorerlink"><a target="blank"
+                                            href="https://explorer.moheng.tech/">前往区块链浏览器</a></span></div>
                                 <div style="overflow-y: scroll;height: 90%;">
                                     <div ng-repeat="block in blockList" style="color: white;">
                                         <div class="eventbox" ng-class="{'darkblue': block.number % 2 == 0}">
                                             <div class="eventmsgid eventmsggreen2">
-                                                区块高度:{{block.number}} 创建时间：{{block.timestamp|date:'yyyy-MM-dd HH:mm:ss'}}
+                                                区块高度:{{block.number}} 创建时间：{{block.timestamp|date:'yyyy-MM-dd
+                                                HH:mm:ss'}}
                                             </div>
                                             <div class="eventmsgtitle">
                                                 交易信息散列编号列表:
                                             </div>
                                             <div class="eventmsgcontent">
-                                                <div ng-if="block.transactions.length > 0" style="color:white;font-size: 0.8rem;text-overflow:ellipsis;overflow-x:hidden;;white-space:nowrap" ng-repeat="tx in block.transactions">
+                                                <div ng-if="block.transactions.length > 0"
+                                                    style="color:white;font-size: 0.8rem;text-overflow:ellipsis;overflow-x:hidden;;white-space:nowrap"
+                                                    ng-repeat="tx in block.transactions">
                                                     {{tx}}
                                                 </div>
                                                 <div ng-if="block.transactions.length == 0">
@@ -103,7 +114,7 @@
                                                 <th>区块链</th>
                                                 <th>区块号</th>
                                                 <th>数据类型</th>
-                                                <th>数据结构</th>
+                                                <th>下链单元</th>
                                                 <th>数据内容</th>
                                                 <th><i class="user outline icon"></i>发送者</th>
                                                 <th>上链时间</th>
@@ -111,13 +122,19 @@
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="dchainInfo in dchainInfo_list | orderBy:'createdAt':true">
-                                                <td><span class="blockchain">{{dchainInfo.blockchain_symbol}}</span></td>
+                                                <td><span class="blockchain">{{dchainInfo.blockchain_symbol}}</span>
+                                                </td>
                                                 <td><i class="cube icon"></i>{{dchainInfo.blockNumber}}</td>
                                                 <td><span class="unit-type">{{dchainInfo.unit_type}}</span></td>
-                                                <td><span class="unit-name"><i class="wpforms icon"></i>{{dchainInfo.from_unit_name}}</span></td>
+                                                <td><span class="unit-name"><i
+                                                            class="wpforms icon"></i>{{dchainInfo.from_unit_name}}</span>
+                                                </td>
                                                 <td title="{{dchainInfo.data}}">{{dchainInfo.data}}</td>
-                                                <td><span class="user" title="{{dchainInfo.from_user.username}}">{{dchainInfo.from_user.username}}</span></td>
-                                                <td title="{{dchainInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}">{{dchainInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}</td>
+                                                <td><span class="user"
+                                                        title="{{dchainInfo.from_user.username}}">{{dchainInfo.from_user}}</span>
+                                                </td>
+                                                <td title="{{dchainInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}">
+                                                    {{dchainInfo.createdAt|date:'yyyy-MM-dd HH:mm:ss' }}</td>
                                             </tr>
                                         </tbody>
                                     </table>
