@@ -154,12 +154,12 @@ angular.
                 //getMohengBlocklist()
                 getMoacBlocklist()
                 getBusinessDchainData()
-                // var refresh_interval = setInterval(() => {
-                //     getBusinessUchainData()
-                //     //getMohengBlocklist()
-                //     getMoacBlocklist()
-                //     getBusinessDchainData()
-                // }, 10000);
+                var refresh_interval = setInterval(() => {
+                    getBusinessUchainData()
+                    //getMohengBlocklist()
+                    getMoacBlocklist()
+                    getBusinessDchainData()
+                }, 10000);
 
                 var map = L.map('cityChart');
                 var baseLayers = {
