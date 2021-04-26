@@ -59,8 +59,19 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moheng某一区间内的多个区块信息
              */
             get_moheng_blocklist: function (query) {
+                return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getBlockList", "", query);
+            },
+            /**
+             * 获取moac区块链高度
+             */
+            get_moac_blocknumber: function () {
+                return http_request("GET", "http://47.92.94.8:8080/moac/mp/getblockNumber");
+            },
+            /**
+             * 获取moac某一区间内的多个区块信息
+             */
+            get_moac_blocklist: function (query) {
                 return http_request("GET", "http://47.92.94.8:8080/moac/mp/getBlockList", "", query);
-                // return http_request("GET", "http://47.92.94.8:8080/moheng/mp/getBlockList", "", query);
             },
         }
     });

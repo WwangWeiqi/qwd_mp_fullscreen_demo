@@ -121,7 +121,7 @@ angular.
                         console.log(err)
                     })
                 }
-
+                // moheng
                 var getMohengBlocklist = function () {
                     apiService.get_moheng_blocknumber().then(data => {
 
@@ -138,12 +138,26 @@ angular.
                         console.log(err)
                     })
                 }
+                // moac
+                var getMoacBlocklist = function () {
+                    apiService.get_moac_blocknumber().then(data => {
+                        let latest = data.data.data;
+                        apiService.get_moac_blocklist({ start: latest - 10, end: latest }).then(result => {
+                            $scope.blockList = result.data.data.reverse();
+                        })
+                    }).catch(err => {
+                        console.log(err)
+                    })
+                }
+
                 getBusinessUchainData()
-                getMohengBlocklist()
+                //getMohengBlocklist()
+                getMoacBlocklist()
                 getBusinessDchainData()
                 // var refresh_interval = setInterval(() => {
                 //     getBusinessUchainData()
-                //     getMohengBlocklist()
+                //     //getMohengBlocklist()
+                //     getMoacBlocklist()
                 //     getBusinessDchainData()
                 // }, 10000);
 

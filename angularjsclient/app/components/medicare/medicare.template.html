@@ -47,7 +47,7 @@
                                             <tr>
                                                 <th>区块链</th>
                                                 <th>数据类型</th>
-                                                <th>数据结构</th>
+                                                <th>上链单元</th>
                                                 <th><i class="user outline icon"></i>发送者</th>
                                                 <th><i class="user outline icon"></i>接收者</th>
                                                 <th>上链记录编号</th>
@@ -77,8 +77,12 @@
                     <div class="col col-r mycol-r">
                         <div class="xpanel-wrapper xpanel-wrapper-60">
                             <div class="xpanel xpanel-l-b">
-                                <div class="title"><span>墨珩区块链监控</span><span class="explorerlink"><a target="blank"
-                                            href="https://explorer.moheng.tech/">前往区块链浏览器</a></span></div>
+                                <div class="title">
+                                    <span>MOAC区块链监控</span>
+                                    <span class="explorerlink">
+                                        <a target="blank" href="https://explorer.moheng.tech/">前往区块链浏览器</a>
+                                    </span>
+                                </div>
                                 <div style="overflow-y: scroll;height: 90%;">
                                     <div ng-repeat="block in blockList" style="color: white;">
                                         <div class="eventbox" ng-class="{'darkblue': block.number % 2 == 0}">
@@ -127,7 +131,7 @@
                                                 <td><i class="cube icon"></i>{{dchainInfo.blockNumber}}</td>
                                                 <td><span class="unit-type">{{dchainInfo.unit_type}}</span></td>
                                                 <td><span class="unit-name"><i
-                                                            class="wpforms icon"></i>{{dchainInfo.from_unit_name}}</span>
+                                                            class="wpforms icon"></i>{{dchainInfo.unit_name}}</span>
                                                 </td>
                                                 <td title="{{dchainInfo.data}}">{{dchainInfo.data}}</td>
                                                 <td><span class="user"
