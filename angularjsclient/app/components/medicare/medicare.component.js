@@ -82,28 +82,31 @@ angular.
 
                     for (let i in result.business_unit_info) {
                         const unit_info = result.business_unit_info[i]
+                        if (unit_info.info) {
+                            if (unit_info.info.unit_type === 2) {
+                                if (unit_info.content) {
+                                    for (let p in unit_info.content) {
+                                        for (let m in unit_info.content[p].data) {
+                                            const data = unit_info.content[p].data[m].data
 
-                        if (unit_info.info.unit_type === 2) {
-                            for (let p in unit_info.content) {
-                                for (let m in unit_info.content[p].data) {
-                                    const data = unit_info.content[p].data[m].data
+                                            for (let b in data) {
 
-                                    for (let b in data) {
+                                                switch (data[b].unit_type) {
+                                                    case 1:
+                                                        data[b].unit_type = "加密数据"
+                                                        break;
+                                                    case 3:
+                                                        data[b].unit_type = "存证数据"
+                                                        break;
+                                                    default:
+                                                        data[b].unit_type = data[b].unit_type
+                                                }
 
-                                        switch (data[b].unit_type) {
-                                            case 1:
-                                                data[b].unit_type = "加密数据"
-                                                break;
-                                            case 3:
-                                                data[b].unit_type = "存证数据"
-                                                break;
-                                            default:
-                                                data[b].unit_type = data[b].unit_type
+                                                data[b].blockchain_symbol = unit_info.info.blockchain_symbol
+                                                data[b].unit_name = unit_info.info.unit_name
+                                                ret_list.push(data[b])
+                                            }
                                         }
-
-                                        data[b].blockchain_symbol = unit_info.info.blockchain_symbol
-                                        data[b].unit_name = unit_info.info.unit_name
-                                        ret_list.push(data[b])
                                     }
                                 }
                             }
