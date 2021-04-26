@@ -22,7 +22,8 @@ angular.module("api.Service", ["plugin.Service"])
             })
         }
 
-        const host = '127.0.0.1:5052'
+        //const host = '127.0.0.1:5052'
+        const host = '39.99.241.232:5052'
 
 
         return {
