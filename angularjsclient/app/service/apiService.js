@@ -34,14 +34,14 @@ angular.module("api.Service", ["plugin.Service"])
              * @returns 
              */
             login: function(token) {
-                return http_request("POST", "http://" + remote_host + "/api/v0.1.0/auth/data/account/login", token);
+                return http_request("POST", "http://" + host + "/api/v0.1.0/auth/data/account/login", token);
             },
             /**
              * 获取业务流程产生的上链数据
              * @returns 
              */
             get_business_flow_uchain_data: function(token) {
-                const http_url = 'http://' + remote_host + '/api/v0.1.0/auth/data/accessData/business_flow_tx_data'
+                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/accessData/business_flow_tx_data'
                 return http_request("GEt", http_url, token);
             },
             /**
@@ -49,7 +49,7 @@ angular.module("api.Service", ["plugin.Service"])
              * @returns 
              */
             get_business_flow_dchain_data: function(token) {
-                const http_url = 'http://' + remote_host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow'
+                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow'
                 return http_request("POST", http_url, token);
             },
             /**
