@@ -143,6 +143,9 @@ angular.
                     apiService.get_moac_blocknumber().then(data => {
                         let latest = data.data.data;
                         apiService.get_moac_blocklist({ start: latest - 10, end: latest }).then(result => {
+                            for (let i = 0; i < result.data.data.length; i++) {
+                                result.data.data[i].timestamp = result.data.data[i].timestamp * 1000
+                            }
                             $scope.blockList = result.data.data.reverse();
                         })
                     }).catch(err => {
