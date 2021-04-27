@@ -38,7 +38,7 @@ angular.
                 var refresh_TXInfo = function (result) {
                     let ret_list = [];
 
-                    console.log('UchainData====>>>', result.tx_info_list);
+                    // console.log('UchainData====>>>', result.tx_info_list);
 
 
                     for (let i = 0; i < result.tx_info_list.length; i++) {
@@ -84,7 +84,7 @@ angular.
                 var refresh_UserDchainData = function (result) {
                     let ret_list = [];
 
-                    console.log('DchainData====>>>', result.business_unit_info);
+                    // console.log('DchainData====>>>', result.business_unit_info);
 
                     for (let i in result.business_unit_info) {
                         const unit_info = result.business_unit_info[i]
@@ -143,7 +143,6 @@ angular.
                 }
                 var getBusinessDchainData = function () {
                     let trace_id = $('#SraceId').val();
-
                     apiService.get_business_flow_dchain_data(trace_id, token).then(data => {
                         let result = data.data.data;
                         $scope.dchainInfo_list = refresh_UserDchainData(result)
