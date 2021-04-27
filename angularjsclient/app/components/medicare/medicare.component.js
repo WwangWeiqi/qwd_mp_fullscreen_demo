@@ -119,7 +119,8 @@ angular.
                 }
 
                 var getBusinessDchainData = function () {
-                    apiService.get_business_flow_dchain_data(token).then(data => {
+                    let trace_id = $("input[name='trace_id']").val();
+                    apiService.get_business_flow_dchain_data(trace_id, token).then(data => {
                         let result = data.data.data;
                         $scope.dchainInfo_list = refresh_UserDchainData(result)
                         // console.log($scope.dchainInfo_list)

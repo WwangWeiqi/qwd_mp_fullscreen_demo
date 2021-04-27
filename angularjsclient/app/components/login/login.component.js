@@ -22,7 +22,7 @@ angular.module('login', ['api.Service', 'plugin.Service'])
 
                     Promise.all([apiService.login(token),
                     apiService.get_business_flow_uchain_data(token),
-                    apiService.get_business_flow_dchain_data(token)
+                    apiService.get_business_flow_dchain_data('', token)
                     ]).then(data => {
                         console.log("----->>>", data)
                         if (data[0].data.statusCode == 200 && data[1].data.statusCode == 200 && data[2].data.statusCode == 200) {
