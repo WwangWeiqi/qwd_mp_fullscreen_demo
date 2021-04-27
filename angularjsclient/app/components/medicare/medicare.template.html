@@ -4,7 +4,7 @@
             <div class="header">
                 <h1 class="header-title"
                     style="-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;">
-                    多链融合平台业务流程数据监控
+                    医保审计平台业务流程数据监控
                 </h1>
             </div>
             <div class="wrapper">
@@ -41,7 +41,7 @@
                             <div class="xpanel xpanel-c-b">
                                 <div class="title title-long">业务数据上链监控</div>
                                 <!-- <div class="fill-h" id="timeDistChart"></div> -->
-                                <div style="height: 80%;overflow: auto;">
+                                <div style="height: 86%;overflow: auto;">
                                     <table class="ui very compact inverted fixed single line table uchaintable">
                                         <thead>
                                             <tr>
@@ -108,11 +108,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="xpanel-wrapper xpanel-wrapper-40" style="height:{{xpanel_wrapper_class}}%;">
+                        <div class="xpanel-wrapper xpanel-wrapper-40">
                             <div class="xpanel xpanel-r-m">
-                                <div class="title">用户业务数据下链监控</div>
-                                <div style="height:80%;overflow:auto">
-                                    <table class="ui very compact inverted fixed single line table dchaintable">
+                                <div class="title">
+                                    <span>用户业务数据下链监控</span>
+                                    <div class='filter-box'>
+                                        <span>过滤条件:</span>
+
+                                        <select ng-model="selectedSraceId" name="SraceId" id="SraceId">
+                                            <option value="">请选择</option>
+                                            <option ng-repeat="x in trace_id_list" value="{{x}}">{{x}}</option>
+                                        </select>
+
+                                        <!-- <input type='text' placeholder='请输入过滤条件' name="trace_id" ng-model="trace_id"
+                                            id="trace_id" /> -->
+                                    </div>
+                                </div>
+                                <div style="height: 86%; overflow:auto">
+                                    <table class="ui very compact inverted fixed single line table uchaintable">
                                         <thead>
                                             <tr>
                                                 <th>区块链</th>

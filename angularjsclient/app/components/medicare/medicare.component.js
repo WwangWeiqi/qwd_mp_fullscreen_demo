@@ -37,6 +37,10 @@ angular.
 
                 var refresh_TXInfo = function (result) {
                     let ret_list = [];
+
+                    console.log('UchainData====>>>', result.tx_info_list);
+
+
                     for (let i = 0; i < result.tx_info_list.length; i++) {
                         for (let j = 0; j < result.tx_info_list[i].txhash_list.length; j++) {
                             let unit_type = 0;
@@ -80,46 +84,73 @@ angular.
                 var refresh_UserDchainData = function (result) {
                     let ret_list = [];
 
+                    console.log('DchainData====>>>', result.business_unit_info);
+
                     for (let i in result.business_unit_info) {
                         const unit_info = result.business_unit_info[i]
-                        if (unit_info.info) {
-                            if (unit_info.info.unit_type === 2) {
-                                if (unit_info.content) {
-                                    for (let p in unit_info.content) {
-                                        for (let m in unit_info.content[p].data) {
-                                            const data = unit_info.content[p].data[m].data
+                        if (unit_info.info.unit_type === 2) {
+                            for (let p in unit_info.content) {
+                                for (let m in unit_info.content[p].data) {
+                                    const data = unit_info.content[p].data[m].data
 
-                                            for (let b in data) {
+                                    for (let b in data) {
 
-                                                switch (data[b].unit_type) {
-                                                    case 1:
-                                                        data[b].unit_type = "加密数据"
-                                                        break;
-                                                    case 3:
-                                                        data[b].unit_type = "存证数据"
-                                                        break;
-                                                    default:
-                                                        data[b].unit_type = data[b].unit_type
-                                                }
-
-                                                data[b].blockchain_symbol = unit_info.info.blockchain_symbol
-                                                data[b].unit_name = unit_info.info.unit_name
-                                                ret_list.push(data[b])
-                                            }
+                                        switch (data[b].unit_type) {
+                                            case 1:
+                                                data[b].unit_type = "加密数据"
+                                                break;
+                                            case 3:
+                                                data[b].unit_type = "存证数据"
+                                                break;
+                                            default:
+                                                data[b].unit_type = data[b].unit_type
                                         }
+
+                                        data[b].blockchain_symbol = unit_info.info.blockchain_symbol
+                                        data[b].unit_name = unit_info.info.unit_name
+                                        ret_list.push(data[b])
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    return ret_list
+                }
+                var refresh_TraceIdData = function (result) {
+                    let trace_id_map = {};
+                    let trace_id_list = [];
+
+                    for (let i in result.business_unit_info) {
+                        const unit_info = result.business_unit_info[i]
+                        if (unit_info.info.unit_type === 2) {
+                            for (let p in unit_info.content) {
+                                for (let m in unit_info.content[p].data) {
+                                    const data = unit_info.content[p].data[m].data
+                                    for (let b in data) {
+                                        const trace_id = JSON.parse(data[b].data).trace_id
+                                        trace_id_map[trace_id] = trace_id
                                     }
                                 }
                             }
                         }
                     }
-                    return ret_list
-                }
 
+                    for (let i in trace_id_map) {
+                        trace_id_list.push(trace_id_map[i])
+                    }
+                    return trace_id_list
+                }
                 var getBusinessDchainData = function () {
-                    apiService.get_business_flow_dchain_data(token).then(data => {
+                    let trace_id = $('#SraceId').val();
+
+                    apiService.get_business_flow_dchain_data(trace_id, token).then(data => {
                         let result = data.data.data;
                         $scope.dchainInfo_list = refresh_UserDchainData(result)
-                        // console.log($scope.dchainInfo_list)
+                        if (trace_id === '') {
+                            $scope.trace_id_list = refresh_TraceIdData(result)
+                        }
+                        //console.log($scope.trace_id_list)
                     }).catch(err => {
                         console.log(err)
                     })
@@ -146,6 +177,7 @@ angular.
                     apiService.get_moac_blocknumber().then(data => {
                         let latest = data.data.data;
                         apiService.get_moac_blocklist({ start: latest - 10, end: latest }).then(result => {
+                            //console.log('MoacBlocklist====>>>', result.data.data);
                             for (let i = 0; i < result.data.data.length; i++) {
                                 result.data.data[i].timestamp = result.data.data[i].timestamp * 1000
                             }
@@ -160,6 +192,17 @@ angular.
                 //getMohengBlocklist()
                 getMoacBlocklist()
                 getBusinessDchainData()
+
+                // 监听trace_id Input
+                $scope.$watch('selectedSraceId', function (newValue, oldValue) {
+                    apiService.get_business_flow_dchain_data(newValue, token).then(data => {
+                        let result = data.data.data;
+                        $scope.dchainInfo_list = refresh_UserDchainData(result)
+                    }).catch(err => {
+                        console.log(err)
+                    })
+                })
+
                 var refresh_interval = setInterval(() => {
                     getBusinessUchainData()
                     //getMohengBlocklist()
@@ -199,7 +242,9 @@ angular.
                     position: "topleft"
                 }).addTo(map);
 
-                map.setView(L.latLng(32.4354, 105.8434), 5);
+                //map.setView(L.latLng(32.4354, 105.8434), 5);
+                map.setView(L.latLng(30.953227, 118.770173), 13);
+
                 var overlay = new L.echartsLayer3(map, echarts);
                 var chartsContainer = overlay.getEchartsContainer();
                 var myChart = overlay.initECharts(chartsContainer);

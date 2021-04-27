@@ -22,10 +22,12 @@ angular.module("api.Service", ["plugin.Service"])
             })
         }
 
-        const host = '127.0.0.1:5052'
-        const remote_host = '39.99.241.232:5052'
-        const moac_local = 'http://127.0.0.1:3011'
-        const moac_tyk = "http://47.92.94.8:8080/moac"
+        // const host = '127.0.0.1:5052'
+        // const remote_host = '39.99.241.232:5052'
+        // const moac = 'http://127.0.0.1:3011'
+        const moac = "http://47.92.94.8:8080/moac"
+            // const host = '127.0.0.1:5052'
+        const host = '39.99.241.232:5052'
 
 
         return {
@@ -48,8 +50,11 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取业务流程对用户产生的下链数据
              * @returns 
              */
-            get_business_flow_dchain_data: function(token) {
-                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow'
+            get_business_flow_dchain_data: function(trace_id, token) {
+                const query_val = trace_id ? '?trace_id=' + trace_id : ''
+                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow' + query_val
+                console.log('====>>>', http_url);
+
                 return http_request("POST", http_url, token);
             },
             /**
@@ -68,13 +73,13 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取moac区块链高度
              */
             get_moac_blocknumber: function() {
-                return http_request("GET", moac_local + "/mp/getblockNumber");
+                return http_request("GET", moac + "/mp/getblockNumber");
             },
             /**
              * 获取moac某一区间内的多个区块信息
              */
             get_moac_blocklist: function(query) {
-                return http_request("GET", moac_local + "/mp/getBlockList", "", query);
+                return http_request("GET", moac + "/mp/getBlockList", "", query);
             },
         }
     });
