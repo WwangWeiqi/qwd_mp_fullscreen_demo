@@ -205,7 +205,9 @@ angular.
                     position: "topleft"
                 }).addTo(map);
 
-                map.setView(L.latLng(32.4354, 105.8434), 5);
+                //map.setView(L.latLng(32.4354, 105.8434), 5);
+                map.setView(L.latLng(30.953227, 118.770173), 13);
+
                 var overlay = new L.echartsLayer3(map, echarts);
                 var chartsContainer = overlay.getEchartsContainer();
                 var myChart = overlay.initECharts(chartsContainer);
