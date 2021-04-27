@@ -37,6 +37,10 @@ angular.
 
                 var refresh_TXInfo = function (result) {
                     let ret_list = [];
+
+                    console.log('UchainData====>>>', result.tx_info_list);
+
+
                     for (let i = 0; i < result.tx_info_list.length; i++) {
                         for (let j = 0; j < result.tx_info_list[i].txhash_list.length; j++) {
                             let unit_type = 0;
@@ -80,37 +84,36 @@ angular.
                 var refresh_UserDchainData = function (result) {
                     let ret_list = [];
 
+                    console.log('DchainData====>>>', result.business_unit_info);
+
                     for (let i in result.business_unit_info) {
                         const unit_info = result.business_unit_info[i]
-                        if (unit_info.info) {
-                            if (unit_info.info.unit_type === 2) {
-                                if (unit_info.content) {
-                                    for (let p in unit_info.content) {
-                                        for (let m in unit_info.content[p].data) {
-                                            const data = unit_info.content[p].data[m].data
+                        if (unit_info.info.unit_type === 2) {
+                            for (let p in unit_info.content) {
+                                for (let m in unit_info.content[p].data) {
+                                    const data = unit_info.content[p].data[m].data
 
-                                            for (let b in data) {
+                                    for (let b in data) {
 
-                                                switch (data[b].unit_type) {
-                                                    case 1:
-                                                        data[b].unit_type = "加密数据"
-                                                        break;
-                                                    case 3:
-                                                        data[b].unit_type = "存证数据"
-                                                        break;
-                                                    default:
-                                                        data[b].unit_type = data[b].unit_type
-                                                }
-
-                                                data[b].blockchain_symbol = unit_info.info.blockchain_symbol
-                                                data[b].unit_name = unit_info.info.unit_name
-                                                ret_list.push(data[b])
-                                            }
+                                        switch (data[b].unit_type) {
+                                            case 1:
+                                                data[b].unit_type = "加密数据"
+                                                break;
+                                            case 3:
+                                                data[b].unit_type = "存证数据"
+                                                break;
+                                            default:
+                                                data[b].unit_type = data[b].unit_type
                                         }
+
+                                        data[b].blockchain_symbol = unit_info.info.blockchain_symbol
+                                        data[b].unit_name = unit_info.info.unit_name
+                                        ret_list.push(data[b])
                                     }
                                 }
                             }
                         }
+
                     }
                     return ret_list
                 }
@@ -146,6 +149,9 @@ angular.
                     apiService.get_moac_blocknumber().then(data => {
                         let latest = data.data.data;
                         apiService.get_moac_blocklist({ start: latest - 10, end: latest }).then(result => {
+
+                            console.log('MoacBlocklist====>>>', result.data.data);
+
                             for (let i = 0; i < result.data.data.length; i++) {
                                 result.data.data[i].timestamp = result.data.data[i].timestamp * 1000
                             }
