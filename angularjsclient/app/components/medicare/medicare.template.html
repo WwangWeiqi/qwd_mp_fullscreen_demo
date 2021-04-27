@@ -114,8 +114,14 @@
                                     <span>用户业务数据下链监控</span>
                                     <div class='filter-box'>
                                         <span>过滤条件:</span>
-                                        <input type='text' placeholder='请输入过滤条件' name="trace_id" ng-model="trace_id"
-                                            id="trace_id" />
+
+                                        <select ng-model="selectedSraceId" name="SraceId" id="SraceId">
+                                            <option value="">请选择</option>
+                                            <option ng-repeat="x in trace_id_list" value="{{x}}">{{x}}</option>
+                                        </select>
+
+                                        <!-- <input type='text' placeholder='请输入过滤条件' name="trace_id" ng-model="trace_id"
+                                            id="trace_id" /> -->
                                     </div>
                                 </div>
                                 <div style="height: 86%; overflow:auto">

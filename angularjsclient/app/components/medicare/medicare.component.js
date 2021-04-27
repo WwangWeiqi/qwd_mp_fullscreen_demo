@@ -118,7 +118,9 @@ angular.
                     return ret_list
                 }
                 var refresh_TraceIdData = function (result) {
+                    let trace_id_map = {};
                     let trace_id_list = [];
+
                     for (let i in result.business_unit_info) {
                         const unit_info = result.business_unit_info[i]
                         if (unit_info.info.unit_type === 2) {
@@ -126,21 +128,29 @@ angular.
                                 for (let m in unit_info.content[p].data) {
                                     const data = unit_info.content[p].data[m].data
                                     for (let b in data) {
-                                        trace_id_list.push(JSON.parse(data[b].data).trace_id)
+                                        const trace_id = JSON.parse(data[b].data).trace_id
+                                        trace_id_map[trace_id] = trace_id
                                     }
                                 }
                             }
                         }
                     }
+
+                    for (let i in trace_id_map) {
+                        trace_id_list.push(trace_id_map[i])
+                    }
                     return trace_id_list
                 }
                 var getBusinessDchainData = function () {
-                    let trace_id = $("input[name='trace_id']").val();
+                    let trace_id = $('#SraceId').val();
+
                     apiService.get_business_flow_dchain_data(trace_id, token).then(data => {
                         let result = data.data.data;
                         $scope.dchainInfo_list = refresh_UserDchainData(result)
-                        $scope.trace_id_list = refresh_TraceIdData(result)
-                        // console.log($scope.dchainInfo_list)
+                        if (trace_id === '') {
+                            $scope.trace_id_list = refresh_TraceIdData(result)
+                        }
+                        //console.log($scope.trace_id_list)
                     }).catch(err => {
                         console.log(err)
                     })
@@ -167,9 +177,7 @@ angular.
                     apiService.get_moac_blocknumber().then(data => {
                         let latest = data.data.data;
                         apiService.get_moac_blocklist({ start: latest - 10, end: latest }).then(result => {
-
-                            console.log('MoacBlocklist====>>>', result.data.data);
-
+                            //console.log('MoacBlocklist====>>>', result.data.data);
                             for (let i = 0; i < result.data.data.length; i++) {
                                 result.data.data[i].timestamp = result.data.data[i].timestamp * 1000
                             }
@@ -186,10 +194,14 @@ angular.
                 getBusinessDchainData()
 
                 // 监听trace_id Input
-                $scope.$watch('trace_id', function (newValue, oldValue) {
-                    console.log('trace_id====>>>', newValue)
+                $scope.$watch('selectedSraceId', function (newValue, oldValue) {
+                    apiService.get_business_flow_dchain_data(newValue, token).then(data => {
+                        let result = data.data.data;
+                        $scope.dchainInfo_list = refresh_UserDchainData(result)
+                    }).catch(err => {
+                        console.log(err)
+                    })
                 })
-
 
                 var refresh_interval = setInterval(() => {
                     getBusinessUchainData()

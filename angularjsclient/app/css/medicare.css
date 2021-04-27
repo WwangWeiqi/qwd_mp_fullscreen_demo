@@ -492,7 +492,7 @@ td>.user {
 .medicare .xpanel .uchaintable {
     background: transparent;
     padding: 0 5px 0 5px;
-    height: 90%;
+    /* height: 90%; */
     cursor: pointer;
 }
 
