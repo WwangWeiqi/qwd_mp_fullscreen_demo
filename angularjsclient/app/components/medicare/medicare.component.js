@@ -117,12 +117,29 @@ angular.
                     }
                     return ret_list
                 }
-
+                var refresh_TraceIdData = function (result) {
+                    let trace_id_list = [];
+                    for (let i in result.business_unit_info) {
+                        const unit_info = result.business_unit_info[i]
+                        if (unit_info.info.unit_type === 2) {
+                            for (let p in unit_info.content) {
+                                for (let m in unit_info.content[p].data) {
+                                    const data = unit_info.content[p].data[m].data
+                                    for (let b in data) {
+                                        trace_id_list.push(JSON.parse(data[b].data).trace_id)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return trace_id_list
+                }
                 var getBusinessDchainData = function () {
                     let trace_id = $("input[name='trace_id']").val();
                     apiService.get_business_flow_dchain_data(trace_id, token).then(data => {
                         let result = data.data.data;
                         $scope.dchainInfo_list = refresh_UserDchainData(result)
+                        $scope.trace_id_list = refresh_TraceIdData(result)
                         // console.log($scope.dchainInfo_list)
                     }).catch(err => {
                         console.log(err)
@@ -167,6 +184,13 @@ angular.
                 //getMohengBlocklist()
                 getMoacBlocklist()
                 getBusinessDchainData()
+
+                // 监听trace_id Input
+                $scope.$watch('trace_id', function (newValue, oldValue) {
+                    console.log('trace_id====>>>', newValue)
+                })
+
+
                 var refresh_interval = setInterval(() => {
                     getBusinessUchainData()
                     //getMohengBlocklist()

@@ -22,7 +22,7 @@ angular.module("api.Service", ["plugin.Service"])
             })
         }
 
-        //const host = '127.0.0.1:5052'
+        // const host = '127.0.0.1:5052'
         const host = '39.99.241.232:5052'
 
 
@@ -46,8 +46,11 @@ angular.module("api.Service", ["plugin.Service"])
              * 获取业务流程对用户产生的下链数据
              * @returns 
              */
-            get_business_flow_dchain_data: function (token) {
-                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow'
+            get_business_flow_dchain_data: function (trace_id, token) {
+                const query_val = trace_id ? '?trace_id=' + trace_id : ''
+                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow' + query_val
+                console.log('====>>>', http_url);
+
                 return http_request("POST", http_url, token);
             },
             /**
