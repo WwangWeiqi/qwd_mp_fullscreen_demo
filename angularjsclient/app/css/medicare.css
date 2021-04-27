@@ -451,9 +451,42 @@ td>.user {
     font-size: 17px;
     font-weight: normal;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-image: url("../img/title-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+/* .medicare .xpanel .user-dchain {
+
+} */
+
+.medicare .xpanel .title .filter-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.medicare .xpanel .title .filter-box>span {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+.medicare .xpanel .title .filter-box>input {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 1);
+    -webkit-appearance: none;
+    outline:none;  
+	border:0px;
+    padding-left: 3px;
+}
+
+.medicare .xpanel .title .filter-box>input::placeholder {
+    font-size: 14px;
+    padding-left: 3px;
 }
 
 .medicare .xpanel .uchaintable {
