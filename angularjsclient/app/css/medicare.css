@@ -462,6 +462,10 @@ td>.user {
 /* .medicare .xpanel .user-dchain {
 
 } */
+.select_background {
+    background-color:rgba(0,0,0,0.2);
+    color:rgb(243, 238, 238);
+    }
 
 .medicare .xpanel .title .filter-box {
     display: flex;
