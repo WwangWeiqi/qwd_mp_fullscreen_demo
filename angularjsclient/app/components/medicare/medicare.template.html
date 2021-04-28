@@ -115,9 +115,11 @@
                                     <div class='filter-box'>
                                         <span>过滤条件:</span>
 
-                                        <select ng-model="selectedSraceId" name="SraceId" id="SraceId">
+                                        <select ng-model="selectedSraceId" class="select_background" name="SraceId"
+                                            id="SraceId">
                                             <option value="">请选择</option>
-                                            <option ng-repeat="x in trace_id_list" value="{{x}}">{{x}}</option>
+                                            <option ng-repeat="x in trace_id_list" value="{{x}}">{{x}}
+                                            </option>
                                         </select>
 
                                         <!-- <input type='text' placeholder='请输入过滤条件' name="trace_id" ng-model="trace_id"
