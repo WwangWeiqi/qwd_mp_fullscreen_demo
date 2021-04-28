@@ -238,6 +238,7 @@ angular.
                     }
                 }
 
+
                 $scope.$on("$destroy", function () {
                     console.log('fullscreen destroy, clear interval')
                     clearInterval(refresh_interval);
