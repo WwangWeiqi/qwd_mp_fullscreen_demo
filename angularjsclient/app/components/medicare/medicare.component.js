@@ -209,44 +209,6 @@ angular.
                     getBusinessDchainData()
                 }, 10000);
 
-                var map = L.map('cityChart');
-                var baseLayers = {
-                    "高德地图": L.tileLayer('http://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
-                        subdomains: "1234"
-                    }),
-                    '高德影像': L.layerGroup([L.tileLayer('http://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}', {
-                        subdomains: "1234"
-                    }), L.tileLayer('http://t{s}.tianditu.cn/DataServer?T=cta_w&X={x}&Y={y}&L={z}', {
-                        subdomains: "1234"
-                    })]),
-                    "立体地图": L.tileLayer('https://a.tiles.mapbox.com/v3/examples.c7d2024a/{z}/{x}/{y}.png', {
-                        attribution: 'Map &copy; Pacific Rim Coordination Center (PRCC).  Certain data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-                        key: 'BC9A493B41014CAABB98F0471D759707',
-                        styleId: 22677
-                    }),
-                    "Foursquare": L.tileLayer('https://a.tiles.mapbox.com/v3/foursquare.map-0y1jh28j/{z}/{x}/{y}.png', {
-                        attribution: 'Map &copy; Pacific Rim Coordination Center (PRCC).  Certain data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-                        key: 'BC9A493B41014CAABB98F0471D759707',
-                        styleId: 22677
-                    }),
-                    'GeoQ灰色底图': L.tileLayer('http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}').addTo(map)
-                };
-                L.tileLayer('https://a.tiles.mapbox.com/v3/foursquare.map-0y1jh28j/{z}/{x}/{y}.png', {
-                    attribution: 'Map &copy; Pacific Rim Coordination Center (PRCC).  Certain data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-                    key: 'BC9A493B41014CAABB98F0471D759707',
-                    styleId: 22677
-                });
-
-                var layercontrol = L.control.layers(baseLayers, {}, {
-                    position: "topleft"
-                }).addTo(map);
-
-                //map.setView(L.latLng(32.4354, 105.8434), 5);
-                map.setView(L.latLng(30.953227, 118.770173), 13);
-
-                var overlay = new L.echartsLayer3(map, echarts);
-                var chartsContainer = overlay.getEchartsContainer();
-                var myChart = overlay.initECharts(chartsContainer);
 
                 function formatDate (date) {
                     var hours = date.getHours();
@@ -275,7 +237,6 @@ angular.
                         return '¥' + parseFloat(parseInt(num / 100000000) + '.' + decimal) + '亿'
                     }
                 }
-
 
                 $scope.$on("$destroy", function () {
                     console.log('fullscreen destroy, clear interval')
