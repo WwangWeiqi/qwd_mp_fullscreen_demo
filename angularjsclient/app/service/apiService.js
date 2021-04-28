@@ -22,12 +22,12 @@ angular.module("api.Service", ["plugin.Service"])
             })
         }
 
-        // const host = '127.0.0.1:5052'
+        const host = '192.168.3.73:5052'
         // const remote_host = '39.99.241.232:5052'
         // const moac = 'http://127.0.0.1:3011'
         const moac = "http://47.92.94.8:8080/moac"
         // const host = '127.0.0.1:5052'
-        const host = '39.99.241.232:5052'
+        // const host = '39.99.241.232:5052'
 
 
         return {

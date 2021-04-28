@@ -785,6 +785,185 @@ td>.user {
 .medicare .fill-h {
     height: 100% !important;
     min-height: 100% !important;
+    background: url("../img/panel-c-b.png");
+    background-size: 100% 100%;
+}
+
+.medicare .fill-h .fill-content-h {
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.medicare .fill-h .fill-content-h .item {
+    width: 26%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: .5%;
+    padding-right: .5%;
+    padding-bottom: 3%;
+}
+
+.medicare .fill-h .fill-content-h .l {
+    margin-right: 10%;
+}
+
+.medicare .fill-h .fill-content-h .r{
+    margin-left: 10%;
+}
+
+.medicare .fill-h .fill-content-h .b {
+    background: url("../img/05.png") no-repeat;
+    background-size: 100% 100%;
+    height: 55%;
+}
+
+.medicare .fill-h .fill-content-h .cir {
+    width: 20%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: -3%;
+}
+
+.medicare .fill-h .fill-content-h .cir>span {
+    display: block;
+    color: #fff;
+}
+
+.medicare .fill-h .fill-content-h .c {
+    background: url("../img/04.png") no-repeat center;
+    /* background-size: 100% 100%; */
+    background-size: 80%;
+}
+
+.medicare .fill-h .fill-content-h .item>span:nth-child(1) {
+    display: block;
+    color: #4db5e3;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.medicare .fill-h .fill-content-h .item>span:nth-child(2) {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: #3e6f85;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 10px;
+}
+
+
+.medicare .fill-h .fill-content-c {
+    height: 39%;
+    display: flex;
+    align-items:stretch;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.medicare .fill-h .fill-content-c .item {
+    width: 26%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.medicare .fill-h .fill-content-c .l {
+    background: url("../img/01.png");
+    background-size: 100% 100%;
+}
+
+.medicare .fill-h .fill-content-c .c {
+    background: url("../img/03.png");
+    background-size: 100% 100%;
+}
+
+.medicare .fill-h .fill-content-c .r {
+    background: url("../img/02.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.medicare .fill-h .fill-content-c .item>span {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.medicare .fill-h .fill-content-w {
+    height: 100%;
+}
+
+.medicare .fill-h .fill-content-w .fill-content-f {
+    background-image: linear-gradient(rgba(70, 121, 197, .6), rgba(11, 13, 112, .8));
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(11, 13, 112, .8);
+    margin: 0% 1%;
+    height: 14%;
+}
+
+.medicare .fill-h .fill-content-w .tip {
+    margin-left: 1.6%;
+    margin-bottom: .6%;
+}
+
+.medicare .fill-h .fill-content-w .tip .t {
+    display: inline-block;
+    color: #4882c9;
+    font-size: 14px;
+}
+
+
+.medicare .fill-h .fill-content-w .fill-content-f .info-box {
+    overflow: hidden;
+    height: 100%;
+}
+
+.medicare .fill-h .fill-content-w .fill-content-f .info-box .animate {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+    animation: 6s wordsLoop linear infinite normal;
+}
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateY(80px);
+        -webkit-transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform: translateY(80px);
+        -webkit-transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+    }
 }
 
 .medicare .no-margin {
