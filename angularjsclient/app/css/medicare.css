@@ -742,7 +742,7 @@ td>.user {
 
 .medicare .largefont {
     padding-left: 24px;
-    height: 9 0px;
+    height: 90px;
     line-height: 40px;
     font-size: 30px;
     font-weight: normal;
@@ -789,7 +789,7 @@ td>.user {
 .medicare .fill-h {
     height: 100% !important;
     min-height: 100% !important;
-    background: url("../img/panel-c-b.png");
+    background-image: url("../img/panel-c-b.png");
     background-size: 100% 100%;
 }
 
@@ -823,9 +823,10 @@ td>.user {
 }
 
 .medicare .fill-h .fill-content-h .b {
-    background: url("../img/05.png") no-repeat;
+    background-image: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/001.png");
     background-size: 100% 100%;
-    height: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .medicare .fill-h .fill-content-h .cir {
@@ -841,13 +842,29 @@ td>.user {
 
 .medicare .fill-h .fill-content-h .cir>span {
     display: block;
-    color: #fff;
 }
 
+.medicare .fill-h .fill-content-h .cir .n {
+    color: #92caea;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.medicare .fill-h .fill-content-h .cir .z {
+    color: #92caea;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
 .medicare .fill-h .fill-content-h .c {
-    background: url("../img/04.png") no-repeat center;
+    background-image: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/002.png");
     /* background-size: 100% 100%; */
     background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .medicare .fill-h .fill-content-h .item>span:nth-child(1) {
@@ -864,7 +881,7 @@ td>.user {
     display: block;
     font-size: 14px;
     font-weight: 800;
-    color: #3e6f85;
+    color: #889da8;
     height: 32px;
     line-height: 32px;
     margin-left: 10px;
@@ -889,25 +906,50 @@ td>.user {
 
 
 .medicare .fill-h .fill-content-c .l {
-    background: url("../img/01.png");
-    background-size: 100% 100%;
+    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group1.png") no-repeat center;
+    background-size: 80% 90%;
 }
 
 .medicare .fill-h .fill-content-c .c {
-    background: url("../img/03.png");
-    background-size: 100% 100%;
+    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group3.png") no-repeat center;
+    background-size: 80% 90%;
 }
 
 .medicare .fill-h .fill-content-c .r {
-    background: url("../img/02.png") no-repeat center;
-    background-size: 100% 100%;
+    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group2.png") no-repeat center;
+    background-size: 80% 90%;
 }
 
-.medicare .fill-h .fill-content-c .item>span {
+.medicare .fill-h .fill-content-c .item>span:nth-child(1) {
+    display: block;
+    font-size: 26px;
+    /*color: #fff;*/
+    margin-bottom: 30px;
+    position: relative;
+    bottom: -28%;
+}
+
+
+.medicare .fill-h .fill-content-c .item>span:nth-child(2) {
     display: block;
     color: #fff;
-    font-size: 26px;
+    font-size: 16px;
     margin-bottom: 30px;
+    position: relative;
+    bottom: -48%;
+}
+
+
+medicare .fill-h .fill-content-c .item .k {
+    color: #3c85c1;
+}
+
+medicare .fill-h .fill-content-c .item .g {
+    color: #60acbd;
+}
+
+medicare .fill-h .fill-content-c .item .y {
+    color: #664fad;
 }
 
 .medicare .fill-h .fill-content-w {
