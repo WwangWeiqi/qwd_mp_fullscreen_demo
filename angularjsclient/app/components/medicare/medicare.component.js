@@ -245,11 +245,11 @@ angular.
                 });
 
                 /********** 窗口大小改变时，重置报表大小 ********************/
-                window.onresize = function () {
-                    if (cityChart && cityChart.resize) {
-                        cityChart.resize();
-                    }
-                };
+                // window.onresize = function () {
+                //     if (cityChart && cityChart.resize) {
+                //         cityChart.resize();
+                //     }
+                // };
 
             }
         ]
