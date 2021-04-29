@@ -27,7 +27,7 @@ angular.module('login', ['api.Service', 'plugin.Service'])
                         console.log("----->>>", data)
                         if (data[0].data.statusCode == 200 && data[1].data.statusCode == 200 && data[2].data.statusCode == 200) {
                             localStorage.setItem("user_profile", JSON.stringify(data[0].data.data))
-                            $location.path('/business_monitor');
+                            $location.path('/home');
                             $scope.$apply()
                         } else {
                             pluginService.toaster("error", "err")

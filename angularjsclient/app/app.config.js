@@ -8,10 +8,12 @@ config(['$routeProvider',
             when('/', {
                 template: '<login></login>'
             }).
+            when('/home', {
+                template: '<home></home>'
+            }).
             when('/business_monitor', {
                 template: '<medicare></medicare>'
             });
-
         }
     ])
     // .controller("HomeController", function ($scope, $location) {
