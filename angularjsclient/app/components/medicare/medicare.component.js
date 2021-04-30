@@ -277,6 +277,9 @@ angular.
                 })
 
                 var refresh_interval = setInterval(async () => {
+
+                    console.log('blocknumber====>>>', $scope.blocknumber);
+
                     getBusinessUchainData()
                     //getMohengBlocklist()
                     getMoacBlocklist()
