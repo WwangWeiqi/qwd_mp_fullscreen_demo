@@ -56,7 +56,7 @@
                                         </div>
                                         <div class="item c">
                                             <span class="g">28%</span>
-                                            <span>高度可以</span>
+                                            <span>高度可疑</span>
                                         </div>
                                         <div class="item r">
                                             <span class="y">39%</span>
@@ -84,18 +84,18 @@
                                     <table class="ui very compact inverted fixed single line table uchaintable">
                                         <thead>
                                             <tr>
-                                                <th style="width: 9%;">区块链</th>
-                                                <th style="width: 9%;">数据类型</th>
-                                                <th style="width: 23%;">上链单元</th>
+                                                <!-- <th style="width: 9%;">区块链</th> -->
+                                                <th style="width: 15%;">数据类型</th>
+                                                <th style="width: 25%;">上链单元</th>
                                                 <th style="width: 16%;"><i class="user outline icon"></i>发送者</th>
                                                 <th style="width: 16%;"><i class="user outline icon"></i>接收者</th>
-                                                <th style="width: 12%;">上链记录编号</th>
+                                                <th style="width: 13%;">上链记录编号</th>
                                                 <th style="width: 15%;">上链时间</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="txInfo in txInfo_list | orderBy:'createdAt':true">
-                                                <td><span class="blockchain">{{txInfo.blockchain_symbol}}</span></td>
+                                               <!-- <td><span class="blockchain">{{txInfo.blockchain_symbol}}</span></td> -->
                                                 <td><span class="unit-type">{{txInfo.unit_type}}</span></td>
                                                 <td><span class="unit-name"><i
                                                             class="wpforms icon"></i>{{txInfo.unit_name}}</span></td>
@@ -117,7 +117,7 @@
                         <div class="xpanel-wrapper xpanel-wrapper-60">
                             <div class="xpanel xpanel-l-b">
                                 <div class="title">
-                                    <span>MOAC区块链监控</span>
+                                    <span>医保审计区块链监控</span>
                                     <span class="explorerlink">
                                         <a target="blank" href="https://testnet.moac.io/home">前往区块链浏览器</a>
                                     </span>
@@ -169,19 +169,19 @@
                                     <table class="ui very compact inverted fixed single line table uchaintable">
                                         <thead>
                                             <tr>
-                                                <th style="width: 9%;">区块链</th>
-                                                <th style="width: 12%;">区块号</th>
-                                                <th style="width: 9%;">数据类型</th>
+                                                <!-- <th style="width: 9%;">区块链</th> -->
+                                                <th style="width: 15%;">区块号</th>
+                                                <th style="width: 14%;">数据类型</th>
                                                 <th style="width: 23%;">下链单元</th>
-                                                <th style="width: 14%;">数据内容</th>
+                                                <th style="width: 15%;">数据内容</th>
                                                 <th style="width: 16%;"><i class="user outline icon"></i>发送者</th>
                                                 <th style="width: 17%;">上链时间</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="dchainInfo in dchainInfo_list | orderBy:'createdAt':true">
-                                                <td><span class="blockchain">{{dchainInfo.blockchain_symbol}}</span>
-                                                </td>
+                                                <!-- <td><span class="blockchain">{{dchainInfo.blockchain_symbol}}</span>
+                                                </td> -->
                                                 <td><i class="cube icon"></i>{{dchainInfo.blockNumber}}</td>
                                                 <td><span class="unit-type">{{dchainInfo.unit_type}}</span></td>
                                                 <td><span class="unit-name"><i
