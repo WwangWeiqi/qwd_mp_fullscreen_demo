@@ -25,7 +25,6 @@ router.post('/', async function (req, res) {
 
         let post_list = _.slice(dchain_data_list, start_index + 1)
 
-        console.log(post_list)
         mongoModal.DCHAIN_DATA.insertMany(post_list).
             then(data => { res.send(utils.resSuccess('添加下链记录数据成功', data)) }).
             catch(err => { res.send(utils.resFail(7002, `添加下链记录数据失败:${err.message}`)) })
