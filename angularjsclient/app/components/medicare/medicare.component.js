@@ -264,7 +264,7 @@ angular.
                 //getMohengBlocklist()
                 getMoacBlocklist()
                 await getBusinessDchainData()
-                postBlocknumberData()
+                // postBlocknumberData()  // 大屏数据库调用 - 临时注销
 
                 // 监听trace_id Input
                 $scope.$watch('selectedSraceId', function (newValue, oldValue) {
@@ -284,7 +284,7 @@ angular.
                     //getMohengBlocklist()
                     getMoacBlocklist()
                     await getBusinessDchainData()
-                    postBlocknumberData()
+                    // postBlocknumberData()   // 大屏数据库调用 - 临时注销
                 }, 10000);
 
 
