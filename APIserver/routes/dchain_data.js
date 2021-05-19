@@ -4,14 +4,47 @@ var mongoModal = require("../mongo/mongoInit/mongoModal")
 var utils = require("../utils/common_util")
 var _ = require('lodash');
 
+/**
+ * @param {Number} blocknumber 开始区块号
+ * @return 从开始区块号到最新记录的LIST
+ */
 router.get('/', function(req, res) {
-    mongoModal.DCHAIN_DATA.find(req.query).
+    let blocknumber = req.query.blocknumber
+    mongoModal.DCHAIN_DATA.find({ blocknumber: { "$gt": blocknumber } }).
     then(data => {
         res.send(utils.resSuccess("获取下链数据列表成功", data))
     }).catch(err => {
-        res.send(utils.resFail(7001, `获取下链数据列表失败${err.message}`))
+        res.send(utils.resFail(7001, `获取下链数据列表失败：${err.message}`))
     })
 });
+
+/**
+ * @return 查询结果LIST
+ */
+router.get('/search', function(req, res) {
+    mongoModal.DCHAIN_DATA.find(query).
+    then(data => {
+        res.send(utils.resSuccess("查询下链数据列表成功", data))
+    }).catch(err => {
+        res.send(utils.resFail(7001, `查询下链数据列表失败：${err.message}`))
+    })
+});
+
+
+/**
+ * @param {Number} trace_id 审计周期id
+ * @return 查询某一审计周期最新状态数据
+ */
+router.get('/latest_record', function(req, res) {
+    let trace_id = req.query.trace_id
+    mongoModal.DCHAIN_DATA.findOne({ trace_id: trace_id }).sort({ "createdAt": -1 }).
+    then(data => {
+        res.send(utils.resSuccess("查询下链数据列表成功", data))
+    }).catch(err => {
+        res.send(utils.resFail(7001, `查询下链数据列表失败：${err.message}`))
+    })
+});
+
 
 router.post('/', async function(req, res) {
     try {
@@ -25,7 +58,9 @@ router.post('/', async function(req, res) {
         let start_index = start_block ? _.findIndex(dchain_data_list, start_block) : -1;
 
         let post_list = _.slice(dchain_data_list, start_index + 1)
-        console.log(post_list)
+
+        if (post_list.length == 0) { res.send(utils.resSuccess('没有新的下链记录', [])); return }
+
         mongoModal.DCHAIN_DATA.insertMany(post_list).
         then(data => { res.send(utils.resSuccess('添加下链记录数据成功', data)) }).
         catch(err => { res.send(utils.resFail(7002, `添加下链记录数据失败:${err.message}`)) })
