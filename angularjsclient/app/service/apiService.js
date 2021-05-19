@@ -22,12 +22,13 @@ angular.module("api.Service", ["plugin.Service"])
             })
         }
 
-        // const host = '192.168.3.73:5052'
+        // const host = '127.0.0.0:5052'
         // const remote_host = '39.99.241.232:5052'
         // const moac = 'http://127.0.0.1:3011'
         const moac = "http://47.92.94.8:8080/moac"
-        // const host = '127.0.0.1:5052'
-        const host = '39.99.241.232:5052'
+        // const host = 'http://127.0.0.1:5052'
+        const server = 'http://127.0.0.1:3006'
+        const host = 'http://47.98.199.133:5052'
 
 
         return {
@@ -36,14 +37,14 @@ angular.module("api.Service", ["plugin.Service"])
              * @returns 
              */
             login: function (token) {
-                return http_request("POST", "http://" + host + "/api/v0.1.0/auth/data/account/login", token);
+                return http_request("POST", host + "/api/v0.1.0/auth/data/account/login", token);
             },
             /**
              * 获取业务流程产生的上链数据
              * @returns 
              */
             get_business_flow_uchain_data: function (token) {
-                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/accessData/business_flow_tx_data'
+                const http_url = host + '/api/v0.1.0/auth/data/accessData/business_flow_tx_data'
                 return http_request("GEt", http_url, token);
             },
             /**
@@ -52,7 +53,7 @@ angular.module("api.Service", ["plugin.Service"])
              */
             get_business_flow_dchain_data: function (trace_id, token) {
                 const query_val = trace_id ? '?trace_id=' + trace_id : ''
-                const http_url = 'http://' + host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow' + query_val
+                const http_url = host + '/api/v0.1.0/auth/data/business_flow/execute_business_flow' + query_val
 
                 console.log('http_url================>>>', http_url);
 
@@ -81,6 +82,20 @@ angular.module("api.Service", ["plugin.Service"])
              */
             get_moac_blocklist: function (query) {
                 return http_request("GET", moac + "/mp/getBlockList", "", query);
+            },
+
+            //--------------------------------------------------------------------------------       
+            /**
+             * 获取server数据
+             */
+            get_dchain_data: function (query) {
+                return http_request("GET", server + "/auth/dchain_data", "", query);
+            },
+            /**
+             * 写入server数据
+             */
+            post_dchain_data: function (data) {
+                return http_request("POST", server + "/auth/dchain_data", "", data);
             },
         }
     });
