@@ -201,7 +201,6 @@ angular.
                                 $scope.BigScreenViolationAmount = map.statistics.violationAmount
                                 $scope.BigScreenBreakRule = map.statistics.secondCheckResult.breakRule + map.statistics.iaCheckNumber.breakRule + map.statistics.firstCheckResult.breakRule + map.statistics.finalCheckResult.breakRule
                                 $scope.BigScreenSuspicious = Math.round($scope.BigScreenBreakRule / $scope.BigScreenTotalNumber * 10000) / 100.00
-                                console.log('BBBBB====>>>', map.statistics);
                             }
 
                             resolve()
