@@ -823,7 +823,8 @@ td>.user {
 }
 
 .medicare .fill-h .fill-content-h .b {
-    background-image: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/001.png");
+    /* background-image: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/001.png"); */
+    background-image: url("../img/schedule.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -862,6 +863,7 @@ td>.user {
 .medicare .fill-h .fill-content-h .c {
     background-image: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/002.png");
     /* background-size: 100% 100%; */
+    background-image: url("../img/review.png");
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -906,17 +908,20 @@ td>.user {
 
 
 .medicare .fill-h .fill-content-c .l {
-    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group1.png") no-repeat center;
+    /* background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group1.png") no-repeat center; */
+    background: url("../img/unusual.png") no-repeat center;
     background-size: 80% 90%;
 }
 
 .medicare .fill-h .fill-content-c .c {
-    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group3.png") no-repeat center;
+    /* background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group3.png") no-repeat center; */
+    background: url("../img/lv.png") no-repeat center;
     background-size: 80% 90%;
 }
 
 .medicare .fill-h .fill-content-c .r {
-    background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group2.png") no-repeat center;
+    /* background: url("https://bbimp.oss-cn-hangzhou.aliyuncs.com/qiwenda/group2.png") no-repeat center; */
+    background: url("../img/fen.png") no-repeat center;
     background-size: 80% 90%;
 }
 
