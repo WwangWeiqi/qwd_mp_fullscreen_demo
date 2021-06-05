@@ -4,16 +4,16 @@ var mongoModal = require("../mongo/mongoInit/mongoModal")
 var utils = require("../utils/common_util")
 var _ = require('lodash');
 
-router.get('/', function (req, res) {
+router.get('/', function(req, res) {
     mongoModal.DCHAIN_DATA.find(req.query).
-        then(data => {
-            res.send(utils.resSuccess("获取下链数据列表成功", data))
-        }).catch(err => {
-            res.send(utils.resFail(7001, `获取下链数据列表失败${err.message}`))
-        })
+    then(data => {
+        res.send(utils.resSuccess("获取下链数据列表成功", data))
+    }).catch(err => {
+        res.send(utils.resFail(7001, `获取下链数据列表失败${err.message}`))
+    })
 });
 
-router.post('/', async function (req, res) {
+router.post('/', async function(req, res) {
     try {
         let dchain_data_list = req.body.dchain_data_list;
         dchain_data_list = Object.prototype.toString.call(dchain_data_list) == '[object String]' ? JSON.parse(dchain_data_list) : dchain_data_list;
@@ -26,8 +26,8 @@ router.post('/', async function (req, res) {
         let post_list = _.slice(dchain_data_list, start_index + 1)
 
         mongoModal.DCHAIN_DATA.insertMany(post_list).
-            then(data => { res.send(utils.resSuccess('添加下链记录数据成功', data)) }).
-            catch(err => { res.send(utils.resFail(7002, `添加下链记录数据失败:${err.message}`)) })
+        then(data => { res.send(utils.resSuccess('添加下链记录数据成功', data)) }).
+        catch(err => { res.send(utils.resFail(7002, `添加下链记录数据失败:${err.message}`)) })
     } catch (err) {
         res.send(utils.resFail(7002, `添加下链记录数据失败:${err.message}`))
     }
